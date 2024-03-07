@@ -51,9 +51,7 @@ export const getRequirementController = async (req, res) => {
 
     // Find all documents that match the sellerId and productId
     const requirements = await RequirementModel.find({ sellerId, productId }).populate("buyerId").populate("productId").populate("sellerId")
-      .sort({ createdAt: -1 }) // Sort by createdAt in descending order
-      .select("-__v") // Exclude the version key
-      .lean(); // Convert documents to plain JavaScript objects
+      .sort({ createdAt: -1 }); // Convert documents to plain JavaScript objects
 
     // If no requirements are found, return 404
     if (!requirements || requirements.length === 0) {
@@ -63,22 +61,14 @@ export const getRequirementController = async (req, res) => {
       });
     }
 
-    // Group the requirements by buyerId and keep only the latest one for each buyer
-    const latestRequirements = requirements.reduce((acc, requirement) => {
-      if (!acc[requirement.buyerId] || requirement.createdAt > acc[requirement.buyerId].createdAt) {
-        acc[requirement.buyerId] = requirement;
-      }
-      return acc;
-    }, {});
-
-    // Convert the object of latest requirements back to an array
-    const result = Object.values(latestRequirements);
+    const result=requirements;
 
     res.status(200).json({
       success: true,
       message: "Latest requirements fetched successfully",
       result,
     });
+    
   } catch (error) {
     console.error("Error in fetching requirements:", error);
     res.status(500).json({
