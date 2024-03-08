@@ -64,9 +64,13 @@ function App() {
             <Route path='user/profile' element={<Profile />} />
             <Route path='user/product/:pid' element={<UpdateProduct />} />
             <Route path='user/sell-commodity' element={<SellCommodity />} />
+
+
             <Route path='user/buy-commodity' element={<BuyCommodity />} />
+
+
             <Route path='user/responses/:pid' element={<Responses/>} />
-            <Route path='user/post-equipment' element={<Equipment/>} />
+          
             <Route path='user/post-potential' element={<PostRequirement/>} />
             
             <Route path='user/post-equipment' element={<Equipment/>} />

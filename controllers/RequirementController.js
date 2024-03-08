@@ -179,3 +179,44 @@ export const getPotentialController = async (req, res) => {
 }
 
 
+export const getProductPotentialController = async (req, res) => {
+  try {
+    const { productName } = req.body;
+
+   
+
+    if (!productName) {
+      return res.status(400).json({
+        success: false,
+        message: "Product name not provided",
+      });
+    }
+
+    // Find all documents that match the productName
+    const potentials = await PotentialModel.find({ productName }).populate("buyerId").sort({ createdAt: -1 });
+
+    // If no potentials are found, return 404
+    if (!potentials || potentials.length === 0) {
+      return res.status(400).json({
+        success: false,
+        message: "No potentials found for the specified product name",
+      });
+    }
+
+    res.status(200).send({
+      success: true,
+      message: "Latest potentials fetched successfully",
+      potentials,
+    });
+
+
+  } catch (error) {
+    
+    console.error("Error in fetching potentials:", error);
+    res.status(500).send({
+      success: false,
+      message: "Error in fetching potentials",
+      error: error.message,
+    });
+  }
+};

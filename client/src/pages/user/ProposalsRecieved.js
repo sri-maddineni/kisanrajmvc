@@ -74,20 +74,6 @@ const ProposalsRecieved = () => {
             <UserMenu />
           </div>
           <div className="col-md-8 text-center" style={{ minHeight: "50vh" }}>
-            <div className="btns">
-              <button
-                className="btn btn-warning m-2"
-                onClick={() => setActiveSection("responses")}
-              >
-                Responses (for listed products)
-              </button>
-              <button
-                className="btn btn-warning m-2"
-                onClick={() => setActiveSection("negotiations")}
-              >
-                Negotiations (for proposals sent)
-              </button>
-            </div>
             <div className="container">
               <h1>
                 {activeSection === "responses" ? "Responses" : "Negotiations"}

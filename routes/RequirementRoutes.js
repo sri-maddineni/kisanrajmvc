@@ -1,5 +1,11 @@
 import express from "express";
-import { postRequirementController,getRequirementController, postPotentialController, getPotentialController } from "../controllers/RequirementController.js";
+import { 
+    postRequirementController,
+    getRequirementController, 
+    postPotentialController, 
+    getPotentialController, 
+    getProductPotentialController
+ } from "../controllers/RequirementController.js";
 
 import { isAdmin, isUser, requireSignIn } from "../middlewares/authMiddleware.js";
 
@@ -19,6 +25,11 @@ router.post("/post-potential",requireSignIn,isUser, postPotentialController);
 
 //get all potentials posted by a user
 router.post("/get-potentials",requireSignIn,isUser, getPotentialController);
+
+
+
+//get all potentials posted by a user
+router.post("/get-product-potentials",requireSignIn,isUser, getProductPotentialController);
 
 
 

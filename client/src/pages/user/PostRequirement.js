@@ -96,7 +96,7 @@ const PostRequirement = () => {
 
       if (data?.data.success) {
         toast.success("success");
-        navigate("/dashboard/user");
+        
       }
     } catch (error) {
       console.log(error);
@@ -265,6 +265,7 @@ const PostRequirement = () => {
                     display: "flex",
                     flexDirection: "row",
                     flexWrap: "wrap",
+                    justifyContent:"space-around"
                   }}
                 >
                   {potentials.map((p) => (
@@ -277,7 +278,7 @@ const PostRequirement = () => {
                         <h5 className="card-title" style={{ fontSize: "1rem" }}>
                           <span style={{ fontWeight: "600" }}>
                             {p.organic ? "Organic" : "Inorganic"}
-                          </span>
+                          </span>{" "}
                           <span style={{ fontSize: "1rem", fontWeight: "600" }}>
                             {p.productName}
                           </span>
