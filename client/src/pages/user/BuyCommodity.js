@@ -30,9 +30,11 @@ const BuyCommodity = () => {
             const buyerId = auth?.user._id;
             const productId = pid;
             const sellerId = sellerid;
+
+            const sentBy=auth?.user._id;
     
             const { data: proposeData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/products/propose`, { buyerId, productId, sellerId });
-            const { data: requirementData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/post-requirement`, { quantity, price, date, notes, buyerId, sellerId, productId });
+            const { data: requirementData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/post-requirement`, { quantity, price, date, notes, buyerId, sellerId, productId,sentBy });
     
             if (proposeData?.success && requirementData?.success) {
                 toast.success("Offer proposed!");

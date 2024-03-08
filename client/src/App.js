@@ -67,7 +67,7 @@ function App() {
             <Route path='user/buy-commodity' element={<BuyCommodity />} />
             <Route path='user/responses/:pid' element={<Responses/>} />
             <Route path='user/post-equipment' element={<Equipment/>} />
-            <Route path='user/post-requirement' element={<PostRequirement/>} />
+            <Route path='user/post-potential' element={<PostRequirement/>} />
             
             <Route path='user/post-equipment' element={<Equipment/>} />
             <Route path='user/hire-equipment' element={<HireEquipment/>}/>

@@ -71,6 +71,9 @@ export const registerController = async (req, res) => {
   }
 };
 
+
+
+
 //login controller
 export const loginController = async (req, res) => {
   try {
@@ -86,13 +89,7 @@ export const loginController = async (req, res) => {
 
     const user = await userModel.findOne({ email });
 
-    if (!user) {
-      console.log("User not found");
-      return res.status(404).send({
-        success: false,
-        message: "User not found",
-      });
-    }
+    
 
     const match = await comparePassword(password, user.password);
     if (!match) {

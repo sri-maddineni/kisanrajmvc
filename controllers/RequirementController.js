@@ -1,10 +1,11 @@
+import e from "express";
 import PotentialModel from "../models/PotentialModel.js";
 import RequirementModel from "../models/RequirementModel.js";
+import slugify from "slugify";
 
 export const postRequirementController = async (req, res) => {
   try {
-    const { quantity, price, date, notes, buyerId, sellerId, productId } =
-      req.body;
+    const { quantity, price, date, notes, buyerId, sellerId, productId, sentBy } = req.body;
 
     // Generate combinedId
     const combinedId = `${sellerId}_${productId}_${buyerId}`;
@@ -17,6 +18,7 @@ export const postRequirementController = async (req, res) => {
       buyerId,
       sellerId,
       productId,
+      sentBy,
       combinedId,
     });
 
@@ -50,7 +52,7 @@ export const getRequirementController = async (req, res) => {
     }
 
     // Find all documents that match the sellerId and productId
-    const requirements = await RequirementModel.find({ sellerId, productId }).populate("buyerId").populate("productId").populate("sellerId")
+    const requirements = await RequirementModel.find({ sellerId, productId }).populate("buyerId").populate("productId").populate("sellerId").populate("sentBy")
       .sort({ createdAt: -1 }); // Convert documents to plain JavaScript objects
 
     // If no requirements are found, return 404
@@ -61,14 +63,14 @@ export const getRequirementController = async (req, res) => {
       });
     }
 
-    const result=requirements;
+    const result = requirements;
 
     res.status(200).json({
       success: true,
       message: "Latest requirements fetched successfully",
       result,
     });
-    
+
   } catch (error) {
     console.error("Error in fetching requirements:", error);
     res.status(500).json({
@@ -84,30 +86,30 @@ export const getRequirementController = async (req, res) => {
 
 export const postPotentialController = async (req, res) => {
   try {
-    const {
-      name,
-      buyerId,
-      notes,
-      price,
-      date,
-      organic,
-      quantity,
-      quantityUnit,
-      shipping,
-    } = req.body;
 
     // Generate combinedId
 
-    const result = await new PotentialModel({
-      name,
+    const { productName,
       buyerId,
-      notes,
-      price,
-      date,
-      organic,
       quantity,
       quantityUnit,
+      date,
+      price,
+      organic,
       shipping,
+      notes } = req.body;
+
+    const result = await new PotentialModel({
+      productName,
+      productSlug: slugify(productName),
+      buyerId,
+      quantity,
+      quantityUnit,
+      date,
+      price,
+      organic,
+      shipping,
+      notes,
     }).save();
 
     if (!result) {
@@ -131,3 +133,49 @@ export const postPotentialController = async (req, res) => {
     });
   }
 };
+
+
+
+
+export const getPotentialController = async (req, res) => {
+
+  try {
+    const { buyerId } = req.body;
+
+    if (!buyerId) {
+      return res.status(400).json({
+        success: false,
+        message: "BuyerId not provided",
+      });
+    }
+
+    // Find all documents that match the sellerId and productId
+    const potentials = await PotentialModel.find({ buyerId }).populate("buyerId").sort({ createdAt: -1 });
+
+    // If no requirements are found, return 404
+    if (!potentials || potentials.length === 0) {
+      return res.status(400).json({
+        success: false,
+        message: "No requirements found for the specified buyerid",
+      });
+    }
+
+    potentials;
+
+    res.status(200).json({
+      success: true,
+      message: "Latest potentials fetched successfully",
+      potentials,
+    });
+
+  } catch (error) {
+    console.error("Error in fetching potentials:", error);
+    res.status(500).json({
+      success: false,
+      message: "Error in fetching potentials",
+      error: error.message,
+    });
+  }
+}
+
+

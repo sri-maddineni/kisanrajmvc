@@ -1,11 +1,16 @@
 import mongoose from "mongoose";
+import slugify from "slugify";
 
 
 // name,description,price,requireDate,organic,quantity,quantityUnit,shipping 
 
 const RequirementSchema = new mongoose.Schema(
     {
-        name: {
+        productName: {
+            type: String,
+            required: true
+        },
+        productSlug: {
             type: String,
             required: true,
         },
@@ -30,13 +35,13 @@ const RequirementSchema = new mongoose.Schema(
             type: Number,
             required: true,
         },
-        organic:{
-            type:Boolean,
-            required:true
+        organic: {
+            type: Boolean,
+            required: true
         },
-        shipping:{
-            type:Boolean,
-            required:true
+        shipping: {
+            type: Boolean,
+            required: true
         },
         notes: {
             type: String,

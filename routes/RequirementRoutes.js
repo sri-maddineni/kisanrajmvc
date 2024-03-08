@@ -1,5 +1,5 @@
 import express from "express";
-import { postRequirementController,getRequirementController, postPotentialController } from "../controllers/RequirementController.js";
+import { postRequirementController,getRequirementController, postPotentialController, getPotentialController } from "../controllers/RequirementController.js";
 
 import { isAdmin, isUser, requireSignIn } from "../middlewares/authMiddleware.js";
 
@@ -15,6 +15,10 @@ router.post("/get-requirement", getRequirementController);
 
 //POST requirement for potential lead method post
 router.post("/post-potential",requireSignIn,isUser, postPotentialController);
+
+
+//get all potentials posted by a user
+router.post("/get-potentials",requireSignIn,isUser, getPotentialController);
 
 
 

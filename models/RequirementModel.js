@@ -17,6 +17,11 @@ const RequirementSchema = new mongoose.Schema(
       ref: "products",
       required: true,
     },
+    sentBy: {
+      type: mongoose.ObjectId,
+      ref: "users",
+      required: true,
+    },
     quantity: {
       type: Number,
       required: true,

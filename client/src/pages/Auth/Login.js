@@ -45,7 +45,7 @@ export const Login = () => {
       }
     } catch (error) {
       console.log(error)
-      toast.error("Error in Login!")
+      toast.error("Please check credentials")
     }
   }
 
@@ -90,6 +90,7 @@ export const Login = () => {
             <div className="m-3">
               {/*eslint-disable-next-line}*/}
             <a className="m-2" href="#" onClick={()=>{navigate("/forgot-password")}}>Forgot password</a>
+            
             
            
             </div>

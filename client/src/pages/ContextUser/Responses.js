@@ -44,9 +44,10 @@ const Responses = () => {
             const sellerId = auth?.user._id;
             const productId = pid;
             const buyerId = buyerid;
+            const sentBy=auth?.user?._id;
     
             const { data: proposeData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/products/propose`, { buyerId, productId, sellerId });
-            const { data: requirementData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/post-requirement`, { quantity, price, date, notes, buyerId, sellerId, productId });
+            const { data: requirementData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/post-requirement`, { quantity, price, date, notes, buyerId, sellerId, productId,sentBy });
     
             if (proposeData?.success && requirementData?.success) {
                 toast.success("Offer proposed!");
@@ -93,6 +94,15 @@ const Responses = () => {
 
     const pid = params.pid;
 
+
+    const getPotentials=async()=>{
+        try {
+            
+        } catch (error) {
+            
+        }
+    }
+
     const handleLeads = () => {
         // Add logic for handling leads
     };
@@ -138,7 +148,7 @@ const Responses = () => {
                                         <span className="text-primary m-2" style={{ fontWeight: "500", fontSize: "1.5rem" }}>
                                             {product.name}
                                         </span>{" "}
-                                        <span className="text-warning bg-dark">Rs.{product.price}/-</span> per {" "}
+                                        <span className="text-warning bg-dark">Rs.{product.price}/-</span> per {" "} {product.quantityUnit}
                                         <span className="bg-warning">{product.quantity} {product.quantityUnit}s</span> Lot id: <span className="text-danger">{product._id} </span>{" "}
                                         Posted on : <span className="text-info">{formattedDate}</span>{" "}
                                     </p>
@@ -176,7 +186,7 @@ const Responses = () => {
                                                                 <i className="fa-solid fa-circle-user fa-2x p-1"></i>
                                                             </div>
                                                             <div className="p-1" style={{ width: "70%" }}>
-                                                                <p style={{ fontSize: "15px" }}>{requirement.buyerId.name}</p>
+                                                                <p style={{ fontSize: "15px" }}>{requirement.sentBy.name}</p>
 
                                                             </div>
                                                         </div>

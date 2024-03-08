@@ -3,13 +3,13 @@ import Header from "../../components/layouts/Header";
 import Footer from "../../components/layouts/Footer";
 import UserMenu from "./UserMenu";
 import axios from "axios";
-import toast from "react-hot-toast";
+
 import AuthContext from "../../context/AuthContext";
 import { Link } from "react-router-dom";
 
 const ProposalsRecieved = () => {
-  const [auth] = useContext(AuthContext);
-  const [proposals, setProposals] = useState({});
+  const [auth] = useContext(AuthContext); //for maintaining session data
+  const [proposals, setProposals] = useState({}); //for listing proposals count and data related
   const [posted, setPosted] = useState([]);
   const [productData, setProductData] = useState({});
   const [activeSection, setActiveSection] = useState("responses"); // State to manage active section
@@ -43,11 +43,13 @@ const ProposalsRecieved = () => {
         const productData = {};
         for (const productId in proposalsData) {
           const count = proposalsData[productId].length;
-          proposalsCount[productId] = count;
-          if (!productData[productId]) {
-            const product = await getProductData(productId);
-            if (product) {
-              productData[productId] = product;
+          if (count > 0) {
+            proposalsCount[productId] = count;
+            if (!productData[productId]) {
+              const product = await getProductData(productId);
+              if (product) {
+                productData[productId] = product;
+              }
             }
           }
         }

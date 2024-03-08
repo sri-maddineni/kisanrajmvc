@@ -57,9 +57,11 @@ const Listings = () => {
                                                 <div className="card" style={{ width: "18rem" }}>
                                                     <img src={`/api/v1/products/product-photo/${p._id}`} className="card-img-top" alt={p.name} style={{ height: "25vh", objectFit: "cover" }} />
                                                     <div className="card-body">
-                                                        <h5 className="card-title" style={{ fontSize: "1rem" }}>{p.quality}<i className='fa fa-star fa-sm text-warning'> </i><span> {p.organic ? "organic" : "Inorganic"} </span><span style={{ fontSize: "1rem" }}>{p.name}</span> &nbsp; <br />{p.description}</h5>
-                                                        <p>{p._id}</p>                                                        <p className="card-text"><span className='text-dark bg-warning'> Rs.{p.price}/-</span> per <span>{p.quantity} {p.quantityUnit?p.quantityUnit:""}</span></p>
-                                                        <p>{format(new Date(p.createdAt), 'dd MMM yyyy')}</p>
+                                                        <h5 className="card-title" style={{ fontSize: "1rem" }}><span style={{fontWeight:"600"}}> {p.organic ? "organic" : "Inorganic"} </span><span style={{ fontSize: "1rem",fontWeight:"600" }}>{p.name}</span> &nbsp;{p.quality}<i className='fa fa-star fa-sm text-warning'> </i></h5>
+                                                        <p style={{fontSize:"0.8rem", fontWeight:"600"}}>{p.description}</p>
+                                                        <p className="card-text"><span className='text-dark bg-warning'> Rs.{p.price}/-</span> per <span>{p.quantity} {p.quantityUnit?p.quantityUnit:""}</span></p>
+                                                        <p>Posted on : {format(new Date(p.createdAt), 'dd MMM yyyy')}</p>
+                                                        <p style={{fontSize:"0.8rem"}}>{p._id}</p>   
                                                     </div>
                                                 </div>
                                             </Link>
