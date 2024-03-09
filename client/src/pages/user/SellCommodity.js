@@ -31,6 +31,7 @@ const SellCommodity = () => {
   const [quantity, setQuantity] = useState("");
   const [shipping, setShipping] = useState("");
   const [quantityUnit, setQuantityUnit] = useState("")
+  const [location,setLocation]=useState("")
 
   const [suggestions, setSuggestions] = useState([]);
 
@@ -192,6 +193,9 @@ const SellCommodity = () => {
               
               <div className="mb-3">
                 <input type="text" value={description} placeholder='Enter description' className='form-control' onChange={(e) => setDescription(e.target.value)} />
+              </div>
+              <div className="mb-3">
+                <input type="text" value={location} placeholder='Enter location' className='form-control' onChange={(e) => setLocation(e.target.value)} />
               </div>
 
 

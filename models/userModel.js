@@ -34,6 +34,18 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    pincode:{
+      type:Number,
+      required:true,
+    },
+    latitude:{
+      type:Number,
+      required:true
+    },
+    longitude:{
+      type:Number,
+      required:true
+    },
     answer: {
       type: String,
       required: true,

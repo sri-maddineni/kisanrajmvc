@@ -138,7 +138,7 @@ const BuyCommodity = () => {
 
   return (
     <>
-      <Header  />
+      <Header />
       <div className="row m-3">
         <div style={{ width: "25%" }}>
           {auth.user.role === "0" ? <AdminMenu /> : <UserMenu />}
@@ -146,7 +146,12 @@ const BuyCommodity = () => {
         <div style={{ minHeight: "50vh", width: "70%" }}>
           <h3 className="text-center">All Products</h3>
           <div
-            style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "space-between",
+            }}
           >
             {products?.map((p) => (
               <div className="card m-1" style={{ width: "15rem" }} key={p._id}>

@@ -30,17 +30,14 @@ const Footer = () => {
         </div>
         <div className="div3 text-center">
           <h2>All links</h2>
-          <a href="/">Buy</a>
-          <a href="/">Sell</a>
-          <a href="/">Hire</a>
-          <a href="/">Buyers</a>
-          <a href="/">Sellers</a>
-          <a href="/">Farmers</a>
-          <a href="/">Companies</a>
+          <Link to="/dashboard/user/buy-commodity">Buy</Link>
+          <Link to="/dashboard/user/sell-commodity">Sell</Link>
+          <Link to="/dashboard/user/hire-equipment">Hire</Link>
+          <Link to="/">Companies</Link>
           <Link to="/dashboard/user/buy-commodity">All Commodities</Link>
-          <a href="/">Cold storages</a>
-          <a href="/">Equipment for Hire</a>
-          <a href="/">Equipment for sale</a>
+          <Link to="/">Cold storages</Link>
+          <Link to="/">Equipment for Hire</Link>
+          <Link to="/">Equipment for sale</Link>
         </div>
 
         <div className="div4 text-center">
