@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from "react";
 import Header from "../../components/layouts/Header";
 import Footer from "../../components/layouts/Footer";
@@ -22,30 +19,37 @@ export const Register = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    if (pincode.length > 6) {
+      toast("Please enter valid pincode");
+    } else {
+      e.preventDefault();
 
-    try {
-      const res = await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/register`, {
-        name,
-        email,
-        password,
-        phone,
-        answer,
-        address,
-        pincode,
-        latitude,
-        longitude,
-      });
+      try {
+        const res = await axios.post(
+          `${process.env.REACT_APP_API}/api/v1/auth/register`,
+          {
+            name,
+            email,
+            password,
+            phone,
+            answer,
+            address,
+            pincode,
+            latitude,
+            longitude,
+          }
+        );
 
-      if (res.data.success) {
-        toast.success(res.data.message);
-        navigate("/login");
-      } else {
-        toast.error(res.data.message);
+        if (res.data.success) {
+          toast.success(res.data.message);
+          navigate("/login");
+        } else {
+          toast.error(res.data.message);
+        }
+      } catch (error) {
+        console.error(error);
+        toast.error("Error in registration!");
       }
-    } catch (error) {
-      console.error(error);
-      toast.error("Error in registration!");
     }
   };
 
@@ -73,98 +77,107 @@ export const Register = () => {
         <div className="register my-5">
           <h1 className="my-2">Register user</h1>
           <form className="text-center m-3" onSubmit={handleSubmit}>
-          <div className="mb-3">
+            <div className="mb-3">
               <input
                 type="text"
                 className="form-control"
-
                 value={name}
                 required
-                onChange={(e) => { setName(e.target.value) }}
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
                 placeholder="Enter Full Name"
               />
-
             </div>
             <div className="mb-3">
               <input
                 type="text"
                 className="form-control"
-
                 value={email}
-                onChange={(e) => { setEmail(e.target.value) }}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
                 placeholder="Enter Email"
                 required
               />
-
             </div>
 
             <div className="mb-3">
               <input
                 type="password"
                 className="form-control"
-
                 value={password}
-                onChange={(e) => { setPassword(e.target.value) }}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                }}
                 placeholder="Enter password"
                 required
               />
-
             </div>
 
             <div className="mb-3">
               <input
                 type="text"
                 className="form-control"
-
-                value={phone} onChange={(e) => { setPhone(e.target.value) }}
+                value={phone}
+                onChange={(e) => {
+                  setPhone(e.target.value);
+                }}
                 placeholder="Enter phone"
                 required
               />
-
             </div>
 
             <div className="mb-3">
               <input
                 type="text"
                 className="form-control"
-                value={answer} onChange={(e) => { setAnswer(e.target.value) }}
+                value={answer}
+                onChange={(e) => {
+                  setAnswer(e.target.value);
+                }}
                 placeholder="Enter secret code"
                 required
               />
-
             </div>
 
             <div className="mb-3">
               <input
                 type="text"
                 className="form-control"
-
                 value={address}
-                onChange={(e) => { setAddress(e.target.value) }}
+                onChange={(e) => {
+                  setAddress(e.target.value);
+                }}
                 placeholder="Enter Address"
                 required
               />
-
             </div>
 
-            <div className="mb-3" style={{ display: "flex", flexDirection: "row" }}>
+            <div
+              className="mb-3"
+              style={{ display: "flex", flexDirection: "row" }}
+            >
               <input
                 type="number"
                 className="form-control m-1"
-
                 value={pincode}
-                onChange={(e) => { setPincode(e.target.value) }}
+                onChange={(e) => {
+                  setPincode(e.target.value);
+                }}
                 placeholder="Enter Pincode"
                 required
               />
             </div>
 
-            <div className="mb-3" style={{ display: "flex", alignItems: "center" }}>
+            <div
+              className="mb-3"
+              style={{ display: "flex", alignItems: "center" }}
+            >
               <input
                 type="number"
                 className="form-control m-1"
                 value={latitude}
-                onChange={(e) => setLatitude(e.target.value)}
                 placeholder="Enter latitude"
                 required
               />
@@ -172,7 +185,6 @@ export const Register = () => {
                 type="number"
                 className="form-control m-1"
                 value={longitude}
-                onChange={(e) => setLongitude(e.target.value)}
                 placeholder="Enter Longitude"
                 required
               />

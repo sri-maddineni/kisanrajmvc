@@ -1,4 +1,4 @@
-import React, { useState, useContext,useEffect } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Header from '../../components/layouts/Header';
 import Footer from '../../components/layouts/Footer';
 import { Radio } from 'antd';
@@ -15,11 +15,7 @@ import commodities from "../../Data/Commodities"; // Import the data from Commod
 
 const SellCommodity = () => {
 
-  
-
   const navigate = useNavigate();
-
-
 
   const [photo, setPhoto] = useState("");
 
@@ -31,7 +27,8 @@ const SellCommodity = () => {
   const [quantity, setQuantity] = useState("");
   const [shipping, setShipping] = useState("");
   const [quantityUnit, setQuantityUnit] = useState("")
-  const [location,setLocation]=useState("")
+  const [location, setLocation] = useState("")
+  const [commodityId, setCommodityId] = useState("")
 
   const [suggestions, setSuggestions] = useState([]);
 
@@ -40,10 +37,13 @@ const SellCommodity = () => {
 
   const [auth] = useContext(AuthContext);
 
-   const filterSuggestions = (input) => {
+  const filterSuggestions = (input) => {
     const filtered = commodities.filter(product => product.name.toLowerCase().includes(input.toLowerCase()));
     setSuggestions(filtered.map(product => product.name));
+    /// i wnat to assign commodityId to product._id
+    setCommodityId(filtered.map(product => product._id))
   }
+
 
   useEffect(() => {
     if (name && isFocused) { // Only filter suggestions when name is not empty and input is focused
@@ -87,6 +87,8 @@ const SellCommodity = () => {
       productData.append("availableDate", availableDate)
       productData.append("organic", organic)
       productData.append("quantityUnit", quantityUnit)
+      productData.append("commodityId",commodityId[0])
+     
 
 
       const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/products/create-product`, productData);
@@ -190,7 +192,7 @@ const SellCommodity = () => {
                 </div>
               </div>
 
-              
+
               <div className="mb-3">
                 <input type="text" value={description} placeholder='Enter description' className='form-control' onChange={(e) => setDescription(e.target.value)} />
               </div>

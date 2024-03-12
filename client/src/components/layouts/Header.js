@@ -66,7 +66,7 @@ const Header = () => {
             ) : (
               <div className="dropdown">
                 <button
-                  className="btn btn-secondary dropdown-toggle"
+                  className="btn btn-secondary btn-sm dropdown-toggle m-1"
                   type="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
@@ -91,6 +91,25 @@ const Header = () => {
                 </ul>
               </div>
             )}
+            <div className="dropdown">
+                <button
+                  className="btn btn-secondary btn-sm dropdown-toggle m-1"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Language
+                </button>
+                <ul className="dropdown-menu">
+                  <li>
+                    English
+                  </li>
+                  <li>
+                    Telugu
+                  </li>
+                </ul>
+              </div>
+            
           </ul>
         </div>
       </div>

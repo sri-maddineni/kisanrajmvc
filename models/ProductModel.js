@@ -21,10 +21,16 @@ const ProductSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    sellerId:{
+    sellerId: {
         type: mongoose.ObjectId,
         ref: "users",
         required: true,
+    },
+    commodityId: {
+        type: mongoose.ObjectId,
+        ref: "commodities",
+        required: true,
+        
     },
     quantity: {
         type: Number,
@@ -41,18 +47,18 @@ const ProductSchema = new mongoose.Schema({
     organic: {
         type: Boolean,
     },
-    quality:{
-        type:Number,
-        default:"5.0"
+    quality: {
+        type: Number,
+        default: "5.0"
     },
-    quantityUnit:{
-        type:String,
-        default:"5.0",
-        required:true
+    quantityUnit: {
+        type: String,
+        default: "5.0",
+        required: true
     },
-    availableDate: { 
+    availableDate: {
         type: Date,
-        required: true 
+        required: true
     }
 
 }, { timestamps: true }

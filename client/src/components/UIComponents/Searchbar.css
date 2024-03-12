@@ -1,0 +1,51 @@
+.loc {
+    padding: 0.6rem;
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 50%;
+    font-size: 1.2rem;
+  }
+  
+  .search {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+    flex-direction: row;
+  }
+  form {
+    display: flex;
+    width: 50%;
+  }
+  
+  .btnsearcher {
+    background-color: white;
+    width: 5%;
+    background-color: red;
+    color: white;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .loc {
+      width: 90%;
+      padding: 0.5rem;
+      border-top-left-radius: 13px;
+      border-bottom-left-radius: 13px;
+      border-top-right-radius: 0px;
+      border-bottom-right-radius: 0px;
+    }
+  
+    .btnsearcher {
+      background-color: white;
+      width: 15%;
+      background-color: red;
+      color: white;
+      border-top-right-radius: 13px;
+      border-bottom-right-radius: 13px;
+    }
+  }
+  

@@ -28,7 +28,6 @@ const BuyCommodity = () => {
       const buyerId = auth?.user._id;
       const productId = pid;
       const sellerId = sellerid;
-
       const sentBy = auth?.user._id;
 
       const { data: proposeData } = await axios.post(
@@ -61,6 +60,34 @@ const BuyCommodity = () => {
 
   const [auth] = useContext(AuthContext);
 
+  const distance = (lat, long) => {
+    if (auth?.user?.latitude && auth?.user?.longitude) {
+      const userLat = parseFloat(auth.user.latitude);
+      const userLong = parseFloat(auth.user.longitude);
+      const sellerLat = parseFloat(lat);
+      const sellerLong = parseFloat(long);
+
+      const R = 6371; // Radius of the earth in km
+      const dLat = deg2rad(sellerLat - userLat);
+      const dLon = deg2rad(sellerLong - userLong);
+      const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(deg2rad(userLat)) *
+          Math.cos(deg2rad(sellerLat)) *
+          Math.sin(dLon / 2) *
+          Math.sin(dLon / 2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      const distance = R * c; // Distance in km
+      return distance.toFixed(2);
+    } else {
+      return "N/A"; // If user's location is not available
+    }
+  };
+
+  const deg2rad = (deg) => {
+    return deg * (Math.PI / 180);
+  };
+
   const [proposedlist, setProposedlist] = useState([]);
   const [products, setProducts] = useState([]);
 
@@ -81,7 +108,6 @@ const BuyCommodity = () => {
 
   useEffect(() => {
     getProposedList();
-    // eslint-disable-next-line
   }, []);
 
   const handlepropose = async (pid, sellerid) => {
@@ -150,11 +176,15 @@ const BuyCommodity = () => {
               display: "flex",
               flexDirection: "row",
               flexWrap: "wrap",
-              justifyContent: "space-between",
+              justifyContent: "space-around",
             }}
           >
             {products?.map((p) => (
-              <div className="card m-1" style={{ width: "15rem" }} key={p._id}>
+              <div
+                className="card m-1 text-center"
+                style={{ width: "18rem" }}
+                key={p._id}
+              >
                 <img
                   src={`/api/v1/products/product-photo/${p._id}`}
                   className="card-img-top"
@@ -176,6 +206,11 @@ const BuyCommodity = () => {
                       {p.quantityUnit})
                     </span>
                   </p>
+
+                  <p style={{fontSize:"0.9rem"}}>
+                  approx. distance to seller : {distance(p.sellerId.latitude, p.sellerId.longitude)} km
+                  </p>
+
                   <button
                     className={`btn m-2 btn-${
                       proposedlist.includes(p._id) ? "danger" : "primary"

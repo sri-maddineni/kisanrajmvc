@@ -1,8 +1,6 @@
 const commodities=[
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632604"
-    },
+    "_id":  "65e421028797df1c8a632604",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Mushk Budji Rice",
     "slug": "mushk-budji-rice",
@@ -16,9 +14,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632605"
-    },
+    "_id":  "65e421028797df1c8a632605",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Amaranth Seed",
     "slug": "amaranth-seed",
@@ -32,9 +28,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632606"
-    },
+    "_id":  "65e421028797df1c8a632606",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Arhar",
     "slug": "arhar",
@@ -48,9 +42,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632607"
-    },
+    "_id":  "65e421028797df1c8a632607",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Arhar Dal Split",
     "slug": "arhar-dal-split",
@@ -64,9 +56,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632608"
-    },
+    "_id":  "65e421028797df1c8a632608",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Bajra",
     "slug": "bajra",
@@ -80,9 +70,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632609"
-    },
+    "_id":  "65e421028797df1c8a632609",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Barley",
     "slug": "barley",
@@ -96,9 +84,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63260a"
-    },
+    "_id":  "65e421028797df1c8a63260a",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Barnyard Millet",
     "slug": "barnyard-millet",
@@ -112,9 +98,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63260b"
-    },
+    "_id":  "65e421028797df1c8a63260b",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Basmati rice",
     "slug": "basmati-rice",
@@ -128,9 +112,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63260c"
-    },
+    "_id":  "65e421028797df1c8a63260c",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Browntop Millet",
     "slug": "browntop-millet",
@@ -144,9 +126,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63260d"
-    },
+    "_id":  "65e421028797df1c8a63260d",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Buck Wheat",
     "slug": "buck-wheat",
@@ -160,9 +140,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63260e"
-    },
+    "_id":  "65e421028797df1c8a63260e",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Chakhao Or Black Rice",
     "slug": "chakhao-or-black-rice",
@@ -176,9 +154,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63260f"
-    },
+    "_id":  "65e421028797df1c8a63260f",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Chana Dal Split",
     "slug": "chana-dal-split",
@@ -192,9 +168,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632610"
-    },
+    "_id":  "65e421028797df1c8a632610",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Chana whole",
     "slug": "chana-whole",
@@ -208,9 +182,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632611"
-    },
+    "_id":  "65e421028797df1c8a632611",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Foxtail Millet",
     "slug": "foxtail-millet",
@@ -224,9 +196,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632612"
-    },
+    "_id":  "65e421028797df1c8a632612",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Horse Gram",
     "slug": "horse-gram",
@@ -240,9 +210,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632613"
-    },
+    "_id":  "65e421028797df1c8a632613",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Jowar",
     "slug": "jowar",
@@ -256,9 +224,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632614"
-    },
+    "_id":  "65e421028797df1c8a632614",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Kabuli Chana Whole",
     "slug": "kabuli-chana-whole",
@@ -272,9 +238,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632615"
-    },
+    "_id":  "65e421028797df1c8a632615",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Khesari Dal",
     "slug": "khesari-dal",
@@ -288,9 +252,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632616"
-    },
+    "_id":  "65e421028797df1c8a632616",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Kodo Millet",
     "slug": "kodo-millet",
@@ -304,9 +266,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632617"
-    },
+    "_id":  "65e421028797df1c8a632617",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Little Millet",
     "slug": "little-millet",
@@ -320,9 +280,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632618"
-    },
+    "_id":  "65e421028797df1c8a632618",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Lobia",
     "slug": "lobia",
@@ -336,9 +294,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632619"
-    },
+    "_id":  "65e421028797df1c8a632619",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Maize",
     "slug": "maize",
@@ -352,9 +308,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63261a"
-    },
+    "_id":  "65e421028797df1c8a63261a",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Masoor whole",
     "slug": "masoor-whole",
@@ -368,9 +322,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63261b"
-    },
+    "_id":  "65e421028797df1c8a63261b",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Moong Dal Split",
     "slug": "moong-dal-split",
@@ -384,9 +336,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63261c"
-    },
+    "_id":  "65e421028797df1c8a63261c",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Moong whole",
     "slug": "moong-whole",
@@ -400,9 +350,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63261d"
-    },
+    "_id":  "65e421028797df1c8a63261d",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Moth",
     "slug": "moth",
@@ -416,9 +364,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63261e"
-    },
+    "_id":  "65e421028797df1c8a63261e",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Oats Raw",
     "slug": "oats-raw",
@@ -432,9 +378,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a63261f"
-    },
+    "_id":  "65e421028797df1c8a63261f",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Paddy",
     "slug": "paddy",
@@ -448,9 +392,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632620"
-    },
+    "_id":  "65e421028797df1c8a632620",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Proso Millet",
     "slug": "proso-millet",
@@ -464,9 +406,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632621"
-    },
+    "_id":  "65e421028797df1c8a632621",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Ragi",
     "slug": "ragi",
@@ -480,9 +420,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632622"
-    },
+    "_id":  "65e421028797df1c8a632622",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Rajma",
     "slug": "rajma",
@@ -496,9 +434,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632623"
-    },
+    "_id":  "65e421028797df1c8a632623",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Urad Dal Split",
     "slug": "urad-dal-split",
@@ -512,9 +448,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632624"
-    },
+    "_id":  "65e421028797df1c8a632624",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Urad whole",
     "slug": "urad-whole",
@@ -528,9 +462,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632625"
-    },
+    "_id":  "65e421028797df1c8a632625",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "Wheat",
     "slug": "wheat",
@@ -544,9 +476,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421028797df1c8a632626"
-    },
+    "_id":  "65e421028797df1c8a632626",
     "category": "FOOD GRAINS/ CEREALS",
     "subcategory": "White Peas",
     "slug": "white-peas",
@@ -560,9 +490,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b66"
-    },
+    "_id":  "65e4215a29b5e5e273a95b66",
     "category": "OILSEEDS",
     "subcategory": "Castor seed",
     "slug": "castor-seed",
@@ -576,9 +504,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b67"
-    },
+    "_id":  "65e4215a29b5e5e273a95b67",
     "category": "OILSEEDS",
     "subcategory": "Cotton Seed",
     "slug": "cotton-seed",
@@ -592,9 +518,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b68"
-    },
+    "_id":  "65e4215a29b5e5e273a95b68",
     "category": "OILSEEDS",
     "subcategory": "Kusum seed",
     "slug": "kusum-seed",
@@ -608,9 +532,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b69"
-    },
+    "_id":  "65e4215a29b5e5e273a95b69",
     "category": "OILSEEDS",
     "subcategory": "Linseed",
     "slug": "linseed",
@@ -624,9 +546,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b6a"
-    },
+    "_id":  "65e4215a29b5e5e273a95b6a",
     "category": "OILSEEDS",
     "subcategory": "Mustard seed",
     "slug": "mustard-seed",
@@ -640,9 +560,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b6b"
-    },
+    "_id":  "65e4215a29b5e5e273a95b6b",
     "category": "OILSEEDS",
     "subcategory": "Neem Seeds",
     "slug": "neem-seeds",
@@ -656,9 +574,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b6c"
-    },
+    "_id":  "65e4215a29b5e5e273a95b6c",
     "category": "OILSEEDS",
     "subcategory": "Nigar Seed",
     "slug": "nigar-seed",
@@ -672,9 +588,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b6d"
-    },
+    "_id":  "65e4215a29b5e5e273a95b6d",
     "category": "OILSEEDS",
     "subcategory": "Peanut kernel",
     "slug": "peanut-kernel",
@@ -688,9 +602,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b6e"
-    },
+    "_id":  "65e4215a29b5e5e273a95b6e",
     "category": "OILSEEDS",
     "subcategory": "Pongam seeds",
     "slug": "pongam-seeds",
@@ -704,9 +616,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b6f"
-    },
+    "_id":  "65e4215a29b5e5e273a95b6f",
     "category": "OILSEEDS",
     "subcategory": "Rapeseed",
     "slug": "rapeseed",
@@ -720,9 +630,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b70"
-    },
+    "_id":  "65e4215a29b5e5e273a95b70",
     "category": "OILSEEDS",
     "subcategory": "Sal Seed",
     "slug": "sal-seed",
@@ -736,9 +644,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b71"
-    },
+    "_id":  "65e4215a29b5e5e273a95b71",
     "category": "OILSEEDS",
     "subcategory": "Sesame seed",
     "slug": "sesame-seed",
@@ -752,9 +658,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b72"
-    },
+    "_id":  "65e4215a29b5e5e273a95b72",
     "category": "OILSEEDS",
     "subcategory": "Soyabean",
     "slug": "soyabean",
@@ -768,9 +672,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e4215a29b5e5e273a95b73"
-    },
+    "_id":  "65e4215a29b5e5e273a95b73",
     "category": "OILSEEDS",
     "subcategory": "Sunflower seed",
     "slug": "sunflower-seed",
@@ -784,9 +686,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339024"
-    },
+    "_id":  "65e421ad42ac565bf9339024",
     "category": "FRUITS",
     "subcategory": "Amla",
     "slug": "amla",
@@ -800,9 +700,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339025"
-    },
+    "_id":  "65e421ad42ac565bf9339025",
     "category": "FRUITS",
     "subcategory": "Apple",
     "slug": "apple",
@@ -816,9 +714,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339026"
-    },
+    "_id":  "65e421ad42ac565bf9339026",
     "category": "FRUITS",
     "subcategory": "Apricot",
     "slug": "apricot",
@@ -832,9 +728,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339027"
-    },
+    "_id":  "65e421ad42ac565bf9339027",
     "category": "FRUITS",
     "subcategory": "Avocado",
     "slug": "avocado",
@@ -848,9 +742,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339028"
-    },
+    "_id":  "65e421ad42ac565bf9339028",
     "category": "FRUITS",
     "subcategory": "Baji Banana",
     "slug": "baji-banana",
@@ -864,9 +756,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339029"
-    },
+    "_id":  "65e421ad42ac565bf9339029",
     "category": "FRUITS",
     "subcategory": "Banana",
     "slug": "banana",
@@ -880,9 +770,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933902a"
-    },
+    "_id":  "65e421ad42ac565bf933902a",
     "category": "FRUITS",
     "subcategory": "Ber",
     "slug": "ber",
@@ -896,9 +784,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933902b"
-    },
+    "_id":  "65e421ad42ac565bf933902b",
     "category": "FRUITS",
     "subcategory": "Bilimbi",
     "slug": "bilimbi",
@@ -912,9 +798,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933902c"
-    },
+    "_id":  "65e421ad42ac565bf933902c",
     "category": "FRUITS",
     "subcategory": "Breadfruit",
     "slug": "breadfruit",
@@ -928,9 +812,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933902d"
-    },
+    "_id":  "65e421ad42ac565bf933902d",
     "category": "FRUITS",
     "subcategory": "Cherry Red / Black",
     "slug": "cherry-red-black",
@@ -944,9 +826,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933902e"
-    },
+    "_id":  "65e421ad42ac565bf933902e",
     "category": "FRUITS",
     "subcategory": "Custard apple",
     "slug": "custard-apple",
@@ -960,9 +840,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933902f"
-    },
+    "_id":  "65e421ad42ac565bf933902f",
     "category": "FRUITS",
     "subcategory": "Garcinia",
     "slug": "garcinia",
@@ -976,9 +854,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339030"
-    },
+    "_id":  "65e421ad42ac565bf9339030",
     "category": "FRUITS",
     "subcategory": "Grapefruit",
     "slug": "grapefruit",
@@ -992,9 +868,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339031"
-    },
+    "_id":  "65e421ad42ac565bf9339031",
     "category": "FRUITS",
     "subcategory": "Grapes",
     "slug": "grapes",
@@ -1008,9 +882,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339032"
-    },
+    "_id":  "65e421ad42ac565bf9339032",
     "category": "FRUITS",
     "subcategory": "Guava",
     "slug": "guava",
@@ -1024,9 +896,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339033"
-    },
+    "_id":  "65e421ad42ac565bf9339033",
     "category": "FRUITS",
     "subcategory": "Jackfruit",
     "slug": "jackfruit",
@@ -1040,9 +910,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339034"
-    },
+    "_id":  "65e421ad42ac565bf9339034",
     "category": "FRUITS",
     "subcategory": "Jamun",
     "slug": "jamun",
@@ -1056,9 +924,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339035"
-    },
+    "_id":  "65e421ad42ac565bf9339035",
     "category": "FRUITS",
     "subcategory": "Kinnow",
     "slug": "kinnow",
@@ -1072,9 +938,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339036"
-    },
+    "_id":  "65e421ad42ac565bf9339036",
     "category": "FRUITS",
     "subcategory": "Kiwi",
     "slug": "kiwi",
@@ -1088,9 +952,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339037"
-    },
+    "_id":  "65e421ad42ac565bf9339037",
     "category": "FRUITS",
     "subcategory": "Lady Finger Banana",
     "slug": "lady-finger-banana",
@@ -1104,9 +966,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339038"
-    },
+    "_id":  "65e421ad42ac565bf9339038",
     "category": "FRUITS",
     "subcategory": "Lemon",
     "slug": "lemon",
@@ -1120,9 +980,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339039"
-    },
+    "_id":  "65e421ad42ac565bf9339039",
     "category": "FRUITS",
     "subcategory": "Litchi",
     "slug": "litchi",
@@ -1136,9 +994,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933903a"
-    },
+    "_id":  "65e421ad42ac565bf933903a",
     "category": "FRUITS",
     "subcategory": "Mango",
     "slug": "mango",
@@ -1152,9 +1008,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933903b"
-    },
+    "_id":  "65e421ad42ac565bf933903b",
     "category": "FRUITS",
     "subcategory": "Mangosteen",
     "slug": "mangosteen",
@@ -1168,9 +1022,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933903c"
-    },
+    "_id":  "65e421ad42ac565bf933903c",
     "category": "FRUITS",
     "subcategory": "Mootty Fruit",
     "slug": "mootty-fruit",
@@ -1184,9 +1036,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933903d"
-    },
+    "_id":  "65e421ad42ac565bf933903d",
     "category": "FRUITS",
     "subcategory": "Musk melon",
     "slug": "musk-melon",
@@ -1200,9 +1050,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933903e"
-    },
+    "_id":  "65e421ad42ac565bf933903e",
     "category": "FRUITS",
     "subcategory": "Mysore Banana",
     "slug": "mysore-banana",
@@ -1216,9 +1064,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933903f"
-    },
+    "_id":  "65e421ad42ac565bf933903f",
     "category": "FRUITS",
     "subcategory": "Orange",
     "slug": "orange",
@@ -1232,9 +1078,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339040"
-    },
+    "_id":  "65e421ad42ac565bf9339040",
     "category": "FRUITS",
     "subcategory": "Papaya",
     "slug": "papaya",
@@ -1248,9 +1092,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339041"
-    },
+    "_id":  "65e421ad42ac565bf9339041",
     "category": "FRUITS",
     "subcategory": "Papaya Raw",
     "slug": "papaya-raw",
@@ -1264,9 +1106,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339042"
-    },
+    "_id":  "65e421ad42ac565bf9339042",
     "category": "FRUITS",
     "subcategory": "Passion Fruit",
     "slug": "passion-fruit",
@@ -1280,9 +1120,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339043"
-    },
+    "_id":  "65e421ad42ac565bf9339043",
     "category": "FRUITS",
     "subcategory": "Peach",
     "slug": "peach",
@@ -1296,9 +1134,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339044"
-    },
+    "_id":  "65e421ad42ac565bf9339044",
     "category": "FRUITS",
     "subcategory": "Pear",
     "slug": "pear",
@@ -1312,9 +1148,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339045"
-    },
+    "_id":  "65e421ad42ac565bf9339045",
     "category": "FRUITS",
     "subcategory": "Pineapple",
     "slug": "pineapple",
@@ -1328,9 +1162,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339046"
-    },
+    "_id":  "65e421ad42ac565bf9339046",
     "category": "FRUITS",
     "subcategory": "Plum",
     "slug": "plum",
@@ -1344,9 +1176,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339047"
-    },
+    "_id":  "65e421ad42ac565bf9339047",
     "category": "FRUITS",
     "subcategory": "Pomegranate",
     "slug": "pomegranate",
@@ -1360,9 +1190,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339048"
-    },
+    "_id":  "65e421ad42ac565bf9339048",
     "category": "FRUITS",
     "subcategory": "Rambutan",
     "slug": "rambutan",
@@ -1376,9 +1204,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339049"
-    },
+    "_id":  "65e421ad42ac565bf9339049",
     "category": "FRUITS",
     "subcategory": "Raw Mango",
     "slug": "raw-mango",
@@ -1392,9 +1218,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933904a"
-    },
+    "_id":  "65e421ad42ac565bf933904a",
     "category": "FRUITS",
     "subcategory": "Red Banana",
     "slug": "red-banana",
@@ -1408,9 +1232,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933904b"
-    },
+    "_id":  "65e421ad42ac565bf933904b",
     "category": "FRUITS",
     "subcategory": "Sapota",
     "slug": "sapota",
@@ -1424,9 +1246,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933904c"
-    },
+    "_id":  "65e421ad42ac565bf933904c",
     "category": "FRUITS",
     "subcategory": "Sarda",
     "slug": "sarda",
@@ -1440,9 +1260,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933904d"
-    },
+    "_id":  "65e421ad42ac565bf933904d",
     "category": "FRUITS",
     "subcategory": "Soursop",
     "slug": "soursop",
@@ -1456,9 +1274,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933904e"
-    },
+    "_id":  "65e421ad42ac565bf933904e",
     "category": "FRUITS",
     "subcategory": "Stawberries",
     "slug": "stawberries",
@@ -1472,9 +1288,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf933904f"
-    },
+    "_id":  "65e421ad42ac565bf933904f",
     "category": "FRUITS",
     "subcategory": "Sweet orange",
     "slug": "sweet-orange",
@@ -1488,9 +1302,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ad42ac565bf9339050"
-    },
+    "_id":  "65e421ad42ac565bf9339050",
     "category": "FRUITS",
     "subcategory": "Watermelon",
     "slug": "watermelon",
@@ -1504,9 +1316,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d07"
-    },
+    "_id":  "65e421ec64f9dcf354e14d07",
     "category": "VEGETABLES",
     "subcategory": "Aloe Vera",
     "slug": "aloe-vera",
@@ -1520,9 +1330,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d08"
-    },
+    "_id":  "65e421ec64f9dcf354e14d08",
     "category": "VEGETABLES",
     "subcategory": "Arrowroot",
     "slug": "arrowroot",
@@ -1536,9 +1344,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d09"
-    },
+    "_id":  "65e421ec64f9dcf354e14d09",
     "category": "VEGETABLES",
     "subcategory": "Banana Raw",
     "slug": "banana-raw",
@@ -1552,9 +1358,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d0a"
-    },
+    "_id":  "65e421ec64f9dcf354e14d0a",
     "category": "VEGETABLES",
     "subcategory": "Beetroot",
     "slug": "beetroot",
@@ -1568,9 +1372,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d0b"
-    },
+    "_id":  "65e421ec64f9dcf354e14d0b",
     "category": "VEGETABLES",
     "subcategory": "Bhindi/Okra",
     "slug": "bhindi-okra",
@@ -1584,9 +1386,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d0c"
-    },
+    "_id":  "65e421ec64f9dcf354e14d0c",
     "category": "VEGETABLES",
     "subcategory": "Bitter gourd",
     "slug": "bitter-gourd",
@@ -1600,9 +1400,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d0d"
-    },
+    "_id":  "65e421ec64f9dcf354e14d0d",
     "category": "VEGETABLES",
     "subcategory": "Bottle gourd",
     "slug": "bottle-gourd",
@@ -1616,9 +1414,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d0e"
-    },
+    "_id":  "65e421ec64f9dcf354e14d0e",
     "category": "VEGETABLES",
     "subcategory": "Brinjal",
     "slug": "brinjal",
@@ -1632,9 +1428,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d0f"
-    },
+    "_id":  "65e421ec64f9dcf354e14d0f",
     "category": "VEGETABLES",
     "subcategory": "Broccoli/Calabrese",
     "slug": "broccoli-calabrese",
@@ -1648,9 +1442,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d10"
-    },
+    "_id":  "65e421ec64f9dcf354e14d10",
     "category": "VEGETABLES",
     "subcategory": "Button Mushroom",
     "slug": "button-mushroom",
@@ -1664,9 +1456,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d11"
-    },
+    "_id":  "65e421ec64f9dcf354e14d11",
     "category": "VEGETABLES",
     "subcategory": "Cabbage",
     "slug": "cabbage",
@@ -1680,9 +1470,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d12"
-    },
+    "_id":  "65e421ec64f9dcf354e14d12",
     "category": "VEGETABLES",
     "subcategory": "Capsicum",
     "slug": "capsicum",
@@ -1696,9 +1484,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d13"
-    },
+    "_id":  "65e421ec64f9dcf354e14d13",
     "category": "VEGETABLES",
     "subcategory": "Carrots",
     "slug": "carrots",
@@ -1712,9 +1498,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d14"
-    },
+    "_id":  "65e421ec64f9dcf354e14d14",
     "category": "VEGETABLES",
     "subcategory": "Cauliflower",
     "slug": "cauliflower",
@@ -1728,9 +1512,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d15"
-    },
+    "_id":  "65e421ec64f9dcf354e14d15",
     "category": "VEGETABLES",
     "subcategory": "Cluster beans",
     "slug": "cluster-beans",
@@ -1744,9 +1526,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d16"
-    },
+    "_id":  "65e421ec64f9dcf354e14d16",
     "category": "VEGETABLES",
     "subcategory": "Colocasia vegetable",
     "slug": "colocasia-vegetable",
@@ -1760,9 +1540,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d17"
-    },
+    "_id":  "65e421ec64f9dcf354e14d17",
     "category": "VEGETABLES",
     "subcategory": "Coriander leaves",
     "slug": "coriander-leaves",
@@ -1776,9 +1554,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d18"
-    },
+    "_id":  "65e421ec64f9dcf354e14d18",
     "category": "VEGETABLES",
     "subcategory": "Cucumber",
     "slug": "cucumber",
@@ -1792,9 +1568,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d19"
-    },
+    "_id":  "65e421ec64f9dcf354e14d19",
     "category": "VEGETABLES",
     "subcategory": "Curry Leaves",
     "slug": "curry-leaves",
@@ -1808,9 +1582,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d1a"
-    },
+    "_id":  "65e421ec64f9dcf354e14d1a",
     "category": "VEGETABLES",
     "subcategory": "Drumstick",
     "slug": "drumstick",
@@ -1824,9 +1596,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d1b"
-    },
+    "_id":  "65e421ec64f9dcf354e14d1b",
     "category": "VEGETABLES",
     "subcategory": "Fenugreek Leaves",
     "slug": "fenugreek-leaves",
@@ -1840,9 +1610,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d1c"
-    },
+    "_id":  "65e421ec64f9dcf354e14d1c",
     "category": "VEGETABLES",
     "subcategory": "Garlic",
     "slug": "garlic",
@@ -1856,9 +1624,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d1d"
-    },
+    "_id":  "65e421ec64f9dcf354e14d1d",
     "category": "VEGETABLES",
     "subcategory": "Gherkin",
     "slug": "gherkin",
@@ -1872,9 +1638,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d1e"
-    },
+    "_id":  "65e421ec64f9dcf354e14d1e",
     "category": "VEGETABLES",
     "subcategory": "Ginger",
     "slug": "ginger",
@@ -1888,9 +1652,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d1f"
-    },
+    "_id":  "65e421ec64f9dcf354e14d1f",
     "category": "VEGETABLES",
     "subcategory": "Green Amaranthus",
     "slug": "green-amaranthus",
@@ -1904,9 +1666,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d20"
-    },
+    "_id":  "65e421ec64f9dcf354e14d20",
     "category": "VEGETABLES",
     "subcategory": "Green chillies",
     "slug": "green-chillies",
@@ -1920,9 +1680,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d21"
-    },
+    "_id":  "65e421ec64f9dcf354e14d21",
     "category": "VEGETABLES",
     "subcategory": "Ivy gourd",
     "slug": "ivy-gourd",
@@ -1936,9 +1694,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d22"
-    },
+    "_id":  "65e421ec64f9dcf354e14d22",
     "category": "VEGETABLES",
     "subcategory": "Jimikand (Suran)",
     "slug": "jimikand-suran",
@@ -1952,9 +1708,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d23"
-    },
+    "_id":  "65e421ec64f9dcf354e14d23",
     "category": "VEGETABLES",
     "subcategory": "Lesser yam",
     "slug": "lesser-yam",
@@ -1968,9 +1722,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d24"
-    },
+    "_id":  "65e421ec64f9dcf354e14d24",
     "category": "VEGETABLES",
     "subcategory": "Lobia Pods",
     "slug": "lobia-pods",
@@ -1984,9 +1736,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d25"
-    },
+    "_id":  "65e421ec64f9dcf354e14d25",
     "category": "VEGETABLES",
     "subcategory": "Lotus Stem",
     "slug": "lotus-stem",
@@ -2000,9 +1750,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d26"
-    },
+    "_id":  "65e421ec64f9dcf354e14d26",
     "category": "VEGETABLES",
     "subcategory": "Mint Leaves",
     "slug": "mint-leaves",
@@ -2016,9 +1764,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d27"
-    },
+    "_id":  "65e421ec64f9dcf354e14d27",
     "category": "VEGETABLES",
     "subcategory": "Mustard leaf",
     "slug": "mustard-leaf",
@@ -2032,9 +1778,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d28"
-    },
+    "_id":  "65e421ec64f9dcf354e14d28",
     "category": "VEGETABLES",
     "subcategory": "Onion",
     "slug": "onion",
@@ -2048,9 +1792,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d29"
-    },
+    "_id":  "65e421ec64f9dcf354e14d29",
     "category": "VEGETABLES",
     "subcategory": "Oyster Mushroom",
     "slug": "oyster-mushroom",
@@ -2064,9 +1806,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d2a"
-    },
+    "_id":  "65e421ec64f9dcf354e14d2a",
     "category": "VEGETABLES",
     "subcategory": "Pea",
     "slug": "pea",
@@ -2080,9 +1820,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d2b"
-    },
+    "_id":  "65e421ec64f9dcf354e14d2b",
     "category": "VEGETABLES",
     "subcategory": "Pointed gourd",
     "slug": "pointed-gourd",
@@ -2096,9 +1834,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d2c"
-    },
+    "_id":  "65e421ec64f9dcf354e14d2c",
     "category": "VEGETABLES",
     "subcategory": "Potato",
     "slug": "potato",
@@ -2112,9 +1848,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d2d"
-    },
+    "_id":  "65e421ec64f9dcf354e14d2d",
     "category": "VEGETABLES",
     "subcategory": "Pumpkin",
     "slug": "pumpkin",
@@ -2128,9 +1862,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d2e"
-    },
+    "_id":  "65e421ec64f9dcf354e14d2e",
     "category": "VEGETABLES",
     "subcategory": "Raw Turmeric",
     "slug": "raw-turmeric",
@@ -2144,9 +1876,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d2f"
-    },
+    "_id":  "65e421ec64f9dcf354e14d2f",
     "category": "VEGETABLES",
     "subcategory": "Red Amaranthus",
     "slug": "red-amaranthus",
@@ -2160,9 +1890,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d30"
-    },
+    "_id":  "65e421ec64f9dcf354e14d30",
     "category": "VEGETABLES",
     "subcategory": "Reddish",
     "slug": "reddish",
@@ -2176,9 +1904,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d31"
-    },
+    "_id":  "65e421ec64f9dcf354e14d31",
     "category": "VEGETABLES",
     "subcategory": "Ribbed celery",
     "slug": "ribbed-celery",
@@ -2192,9 +1918,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d32"
-    },
+    "_id":  "65e421ec64f9dcf354e14d32",
     "category": "VEGETABLES",
     "subcategory": "Ridge Gourd",
     "slug": "ridge-gourd",
@@ -2208,9 +1932,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d33"
-    },
+    "_id":  "65e421ec64f9dcf354e14d33",
     "category": "VEGETABLES",
     "subcategory": "Round chilli",
     "slug": "round-chilli",
@@ -2224,9 +1946,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d34"
-    },
+    "_id":  "65e421ec64f9dcf354e14d34",
     "category": "VEGETABLES",
     "subcategory": "Safed Petha",
     "slug": "safed-petha",
@@ -2240,9 +1960,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d35"
-    },
+    "_id":  "65e421ec64f9dcf354e14d35",
     "category": "VEGETABLES",
     "subcategory": "Sem",
     "slug": "sem",
@@ -2256,9 +1974,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d36"
-    },
+    "_id":  "65e421ec64f9dcf354e14d36",
     "category": "VEGETABLES",
     "subcategory": "Snake Guard",
     "slug": "snake-guard",
@@ -2272,9 +1988,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d37"
-    },
+    "_id":  "65e421ec64f9dcf354e14d37",
     "category": "VEGETABLES",
     "subcategory": "Snow Mountain Garlic",
     "slug": "snow-mountain-garlic",
@@ -2288,9 +2002,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d38"
-    },
+    "_id":  "65e421ec64f9dcf354e14d38",
     "category": "VEGETABLES",
     "subcategory": "Spinach",
     "slug": "spinach",
@@ -2304,9 +2016,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d39"
-    },
+    "_id":  "65e421ec64f9dcf354e14d39",
     "category": "VEGETABLES",
     "subcategory": "Sponge Gourd",
     "slug": "sponge-gourd",
@@ -2320,9 +2030,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d3a"
-    },
+    "_id":  "65e421ec64f9dcf354e14d3a",
     "category": "VEGETABLES",
     "subcategory": "Spring Onion",
     "slug": "spring-onion",
@@ -2336,9 +2044,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d3b"
-    },
+    "_id":  "65e421ec64f9dcf354e14d3b",
     "category": "VEGETABLES",
     "subcategory": "Sugar Snap Peas",
     "slug": "sugar-snap-peas",
@@ -2352,9 +2058,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d3c"
-    },
+    "_id":  "65e421ec64f9dcf354e14d3c",
     "category": "VEGETABLES",
     "subcategory": "Sweet Corn",
     "slug": "sweet-corn",
@@ -2368,9 +2072,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d3d"
-    },
+    "_id":  "65e421ec64f9dcf354e14d3d",
     "category": "VEGETABLES",
     "subcategory": "Sweet potato",
     "slug": "sweet-potato",
@@ -2384,9 +2086,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d3e"
-    },
+    "_id":  "65e421ec64f9dcf354e14d3e",
     "category": "VEGETABLES",
     "subcategory": "Tapioca",
     "slug": "tapioca",
@@ -2400,9 +2100,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d3f"
-    },
+    "_id":  "65e421ec64f9dcf354e14d3f",
     "category": "VEGETABLES",
     "subcategory": "Tinda",
     "slug": "tinda",
@@ -2416,9 +2114,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d40"
-    },
+    "_id":  "65e421ec64f9dcf354e14d40",
     "category": "VEGETABLES",
     "subcategory": "Tomato",
     "slug": "tomato",
@@ -2432,9 +2128,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e421ec64f9dcf354e14d41"
-    },
+    "_id":  "65e421ec64f9dcf354e14d41",
     "category": "VEGETABLES",
     "subcategory": "Winged bean",
     "slug": "winged-bean",
@@ -2448,9 +2142,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c23"
-    },
+    "_id":  "65e422beae76785075f39c23",
     "category": "SPICES",
     "subcategory": "Ajwain",
     "slug": "ajwain",
@@ -2464,9 +2156,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c24"
-    },
+    "_id":  "65e422beae76785075f39c24",
     "category": "SPICES",
     "subcategory": "Black Pepper Whole",
     "slug": "black-pepper-whole",
@@ -2480,9 +2170,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c25"
-    },
+    "_id":  "65e422beae76785075f39c25",
     "category": "SPICES",
     "subcategory": "Cardamoms Whole",
     "slug": "cardamoms-whole",
@@ -2496,9 +2184,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c26"
-    },
+    "_id":  "65e422beae76785075f39c26",
     "category": "SPICES",
     "subcategory": "Cloves Whole",
     "slug": "cloves-whole",
@@ -2512,9 +2198,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c27"
-    },
+    "_id":  "65e422beae76785075f39c27",
     "category": "SPICES",
     "subcategory": "Coriander whole",
     "slug": "coriander-whole",
@@ -2528,9 +2212,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c28"
-    },
+    "_id":  "65e422beae76785075f39c28",
     "category": "SPICES",
     "subcategory": "Cumin",
     "slug": "cumin",
@@ -2544,9 +2226,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c29"
-    },
+    "_id":  "65e422beae76785075f39c29",
     "category": "SPICES",
     "subcategory": "Dried Raw Mango Slices",
     "slug": "dried-raw-mango-slices",
@@ -2560,9 +2240,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c2a"
-    },
+    "_id":  "65e422beae76785075f39c2a",
     "category": "SPICES",
     "subcategory": "Dry Ginger",
     "slug": "dry-ginger",
@@ -2576,9 +2254,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c2b"
-    },
+    "_id":  "65e422beae76785075f39c2b",
     "category": "SPICES",
     "subcategory": "Fennel seed",
     "slug": "fennel-seed",
@@ -2592,9 +2268,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c2c"
-    },
+    "_id":  "65e422beae76785075f39c2c",
     "category": "SPICES",
     "subcategory": "Fenugreek seed",
     "slug": "fenugreek-seed",
@@ -2608,9 +2282,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c2d"
-    },
+    "_id":  "65e422beae76785075f39c2d",
     "category": "SPICES",
     "subcategory": "Large cardamom",
     "slug": "large-cardamom",
@@ -2624,9 +2296,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c2e"
-    },
+    "_id":  "65e422beae76785075f39c2e",
     "category": "SPICES",
     "subcategory": "Mace Whole",
     "slug": "mace-whole",
@@ -2640,9 +2310,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c2f"
-    },
+    "_id":  "65e422beae76785075f39c2f",
     "category": "SPICES",
     "subcategory": "Poppy Seed",
     "slug": "poppy-seed",
@@ -2656,9 +2324,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c30"
-    },
+    "_id":  "65e422beae76785075f39c30",
     "category": "SPICES",
     "subcategory": "Red chilli",
     "slug": "red-chilli",
@@ -2672,9 +2338,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c31"
-    },
+    "_id":  "65e422beae76785075f39c31",
     "category": "SPICES",
     "subcategory": "Tejpata",
     "slug": "tejpata",
@@ -2688,9 +2352,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422beae76785075f39c32"
-    },
+    "_id":  "65e422beae76785075f39c32",
     "category": "SPICES",
     "subcategory": "Turmeric",
     "slug": "turmeric",
@@ -2704,9 +2366,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b83"
-    },
+    "_id":  "65e422e45d277b9ac2377b83",
     "category": "MISC",
     "subcategory": "Almond Kernel",
     "slug": "almond-kernel",
@@ -2720,9 +2380,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b84"
-    },
+    "_id":  "65e422e45d277b9ac2377b84",
     "category": "MISC",
     "subcategory": "Anthurium",
     "slug": "anthurium",
@@ -2736,9 +2394,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b85"
-    },
+    "_id":  "65e422e45d277b9ac2377b85",
     "category": "MISC",
     "subcategory": "Areca nut (betel nut)",
     "slug": "areca-nut-betel-nut",
@@ -2752,9 +2408,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b86"
-    },
+    "_id":  "65e422e45d277b9ac2377b86",
     "category": "MISC",
     "subcategory": "Bamboo",
     "slug": "bamboo",
@@ -2768,9 +2422,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b87"
-    },
+    "_id":  "65e422e45d277b9ac2377b87",
     "category": "MISC",
     "subcategory": "Banana Stem",
     "slug": "banana-stem",
@@ -2784,9 +2436,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b88"
-    },
+    "_id":  "65e422e45d277b9ac2377b88",
     "category": "MISC",
     "subcategory": "Betel leaves",
     "slug": "betel-leaves",
@@ -2800,9 +2450,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b89"
-    },
+    "_id":  "65e422e45d277b9ac2377b89",
     "category": "MISC",
     "subcategory": "Carnation",
     "slug": "carnation",
@@ -2816,9 +2464,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b8a"
-    },
+    "_id":  "65e422e45d277b9ac2377b8a",
     "category": "MISC",
     "subcategory": "Chhappan Kaddu",
     "slug": "chhappan-kaddu",
@@ -2832,9 +2478,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b8b"
-    },
+    "_id":  "65e422e45d277b9ac2377b8b",
     "category": "MISC",
     "subcategory": "Chironji",
     "slug": "chironji",
@@ -2848,9 +2492,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b8c"
-    },
+    "_id":  "65e422e45d277b9ac2377b8c",
     "category": "MISC",
     "subcategory": "Chrysanthemum",
     "slug": "chrysanthemum",
@@ -2864,9 +2506,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b8d"
-    },
+    "_id":  "65e422e45d277b9ac2377b8d",
     "category": "MISC",
     "subcategory": "Coconut",
     "slug": "coconut",
@@ -2880,9 +2520,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b8e"
-    },
+    "_id":  "65e422e45d277b9ac2377b8e",
     "category": "MISC",
     "subcategory": "Coconut with Husk",
     "slug": "coconut-with-husk",
@@ -2896,9 +2534,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b8f"
-    },
+    "_id":  "65e422e45d277b9ac2377b8f",
     "category": "MISC",
     "subcategory": "Cotton",
     "slug": "cotton",
@@ -2912,9 +2548,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b90"
-    },
+    "_id":  "65e422e45d277b9ac2377b90",
     "category": "MISC",
     "subcategory": "Gerbera",
     "slug": "gerbera",
@@ -2928,9 +2562,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b91"
-    },
+    "_id":  "65e422e45d277b9ac2377b91",
     "category": "MISC",
     "subcategory": "Ginger Seed",
     "slug": "ginger-seed",
@@ -2944,9 +2576,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b92"
-    },
+    "_id":  "65e422e45d277b9ac2377b92",
     "category": "MISC",
     "subcategory": "Gladiolus",
     "slug": "gladiolus",
@@ -2960,9 +2590,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b93"
-    },
+    "_id":  "65e422e45d277b9ac2377b93",
     "category": "MISC",
     "subcategory": "Green Henna Leaf",
     "slug": "green-henna-leaf",
@@ -2976,9 +2604,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b94"
-    },
+    "_id":  "65e422e45d277b9ac2377b94",
     "category": "MISC",
     "subcategory": "Groundnut with pods",
     "slug": "groundnut-with-pods",
@@ -2992,9 +2618,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b95"
-    },
+    "_id":  "65e422e45d277b9ac2377b95",
     "category": "MISC",
     "subcategory": "Guar seed",
     "slug": "guar-seed",
@@ -3008,9 +2632,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b96"
-    },
+    "_id":  "65e422e45d277b9ac2377b96",
     "category": "MISC",
     "subcategory": "Hilsa",
     "slug": "hilsa",
@@ -3024,9 +2646,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b97"
-    },
+    "_id":  "65e422e45d277b9ac2377b97",
     "category": "MISC",
     "subcategory": "Isabgol",
     "slug": "isabgol",
@@ -3040,9 +2660,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b98"
-    },
+    "_id":  "65e422e45d277b9ac2377b98",
     "category": "MISC",
     "subcategory": "Jack Fruit Seed",
     "slug": "jack-fruit-seed",
@@ -3056,9 +2674,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b99"
-    },
+    "_id":  "65e422e45d277b9ac2377b99",
     "category": "MISC",
     "subcategory": "Jaggery",
     "slug": "jaggery",
@@ -3072,9 +2688,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b9a"
-    },
+    "_id":  "65e422e45d277b9ac2377b9a",
     "category": "MISC",
     "subcategory": "Jute Seeds",
     "slug": "jute-seeds",
@@ -3088,9 +2702,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b9b"
-    },
+    "_id":  "65e422e45d277b9ac2377b9b",
     "category": "MISC",
     "subcategory": "Khandsari",
     "slug": "khandsari",
@@ -3104,9 +2716,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b9c"
-    },
+    "_id":  "65e422e45d277b9ac2377b9c",
     "category": "MISC",
     "subcategory": "Lily",
     "slug": "lily",
@@ -3120,9 +2730,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b9d"
-    },
+    "_id":  "65e422e45d277b9ac2377b9d",
     "category": "MISC",
     "subcategory": "Mahua flower",
     "slug": "mahua-flower",
@@ -3136,9 +2744,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b9e"
-    },
+    "_id":  "65e422e45d277b9ac2377b9e",
     "category": "MISC",
     "subcategory": "Mahua Seed",
     "slug": "mahua-seed",
@@ -3152,9 +2758,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377b9f"
-    },
+    "_id":  "65e422e45d277b9ac2377b9f",
     "category": "MISC",
     "subcategory": "Marigold",
     "slug": "marigold",
@@ -3168,9 +2772,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377ba0"
-    },
+    "_id":  "65e422e45d277b9ac2377ba0",
     "category": "MISC",
     "subcategory": "Nutmeg Whole",
     "slug": "nutmeg-whole",
@@ -3184,9 +2786,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377ba1"
-    },
+    "_id":  "65e422e45d277b9ac2377ba1",
     "category": "MISC",
     "subcategory": "Persimmon",
     "slug": "persimmon",
@@ -3200,9 +2800,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377ba2"
-    },
+    "_id":  "65e422e45d277b9ac2377ba2",
     "category": "MISC",
     "subcategory": "Pinenut",
     "slug": "pinenut",
@@ -3216,9 +2814,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377ba3"
-    },
+    "_id":  "65e422e45d277b9ac2377ba3",
     "category": "MISC",
     "subcategory": "Raisins",
     "slug": "raisins",
@@ -3232,9 +2828,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377ba4"
-    },
+    "_id":  "65e422e45d277b9ac2377ba4",
     "category": "MISC",
     "subcategory": "Raw Arrowroot Powder",
     "slug": "raw-arrowroot-powder",
@@ -3248,9 +2842,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377ba5"
-    },
+    "_id":  "65e422e45d277b9ac2377ba5",
     "category": "MISC",
     "subcategory": "Raw Cashew nut",
     "slug": "raw-cashew-nut",
@@ -3264,9 +2856,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377ba6"
-    },
+    "_id":  "65e422e45d277b9ac2377ba6",
     "category": "MISC",
     "subcategory": "Raw Coffee Beans",
     "slug": "raw-coffee-beans",
@@ -3280,9 +2870,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377ba7"
-    },
+    "_id":  "65e422e45d277b9ac2377ba7",
     "category": "MISC",
     "subcategory": "Raw Honey",
     "slug": "raw-honey",
@@ -3296,9 +2884,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377ba8"
-    },
+    "_id":  "65e422e45d277b9ac2377ba8",
     "category": "MISC",
     "subcategory": "Raw Jute",
     "slug": "raw-jute",
@@ -3312,9 +2898,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377ba9"
-    },
+    "_id":  "65e422e45d277b9ac2377ba9",
     "category": "MISC",
     "subcategory": "Rittha",
     "slug": "rittha",
@@ -3328,9 +2912,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377baa"
-    },
+    "_id":  "65e422e45d277b9ac2377baa",
     "category": "MISC",
     "subcategory": "Rose Cut Flower",
     "slug": "rose-cut-flower",
@@ -3344,9 +2926,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377bab"
-    },
+    "_id":  "65e422e45d277b9ac2377bab",
     "category": "MISC",
     "subcategory": "Safed Musli",
     "slug": "safed-musli",
@@ -3360,9 +2940,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377bac"
-    },
+    "_id":  "65e422e45d277b9ac2377bac",
     "category": "MISC",
     "subcategory": "Saffron",
     "slug": "saffron",
@@ -3376,9 +2954,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377bad"
-    },
+    "_id":  "65e422e45d277b9ac2377bad",
     "category": "MISC",
     "subcategory": "Silk Cocoon",
     "slug": "silk-cocoon",
@@ -3392,9 +2968,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377bae"
-    },
+    "_id":  "65e422e45d277b9ac2377bae",
     "category": "MISC",
     "subcategory": "Spray Chrysanthemum",
     "slug": "spray-chrysanthemum",
@@ -3408,9 +2982,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377baf"
-    },
+    "_id":  "65e422e45d277b9ac2377baf",
     "category": "MISC",
     "subcategory": "Tamarind",
     "slug": "tamarind",
@@ -3424,9 +2996,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377bb0"
-    },
+    "_id":  "65e422e45d277b9ac2377bb0",
     "category": "MISC",
     "subcategory": "Tender coconut",
     "slug": "tender-coconut",
@@ -3440,9 +3010,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377bb1"
-    },
+    "_id":  "65e422e45d277b9ac2377bb1",
     "category": "MISC",
     "subcategory": "Tuberose",
     "slug": "tuberose",
@@ -3456,9 +3024,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377bb2"
-    },
+    "_id":  "65e422e45d277b9ac2377bb2",
     "category": "MISC",
     "subcategory": "Tulip",
     "slug": "tulip",
@@ -3472,9 +3038,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377bb3"
-    },
+    "_id":  "65e422e45d277b9ac2377bb3",
     "category": "MISC",
     "subcategory": "Walnut Kernel",
     "slug": "walnut-kernel",
@@ -3488,9 +3052,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e422e45d277b9ac2377bb4"
-    },
+    "_id":  "65e422e45d277b9ac2377bb4",
     "category": "MISC",
     "subcategory": "Walnuts Inshell",
     "slug": "walnuts-inshell",
@@ -3504,9 +3066,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e426064afe2e55fb787304"
-    },
+    "_id":  "65e426064afe2e55fb787304",
     "category": "Sprayers",
     "subcategory": "Sprayers",
     "slug": "sprayers",
@@ -3520,9 +3080,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e426064afe2e55fb787305"
-    },
+    "_id":  "65e426064afe2e55fb787305",
     "category": "Tractor",
     "subcategory": "Tractor",
     "slug": "tractor",
@@ -3536,9 +3094,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e426064afe2e55fb787306"
-    },
+    "_id":  "65e426064afe2e55fb787306",
     "category": "Plough",
     "subcategory": "Plough",
     "slug": "plough",
@@ -3552,9 +3108,7 @@ const commodities=[
     }
   },
   {
-    "_id": {
-      "$oid": "65e426064afe2e55fb787307"
-    },
+    "_id":  "65e426064afe2e55fb787307",
     "category": "Other",
     "subcategory": "Other",
     "slug": "other",

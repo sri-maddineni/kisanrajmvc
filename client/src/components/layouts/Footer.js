@@ -9,12 +9,12 @@ const Footer = () => {
         <div className="div1">
           <div className="contact">
             <h2>Contact Us</h2>
-            <input type="Text" placeholder="Your Name" className="namer" />
-            <input type="Text" placeholder="Your Email" className="mailer" />
+            <input type="Text" placeholder="Your Name" className="namer text-dark" />
+            <input type="Text" placeholder="Your Email" className="mailer text-dark" />
             <input
               type="Textarea"
               placeholder="Your Message"
-              className="msge"
+              className="msge text-dark"
               rows="4"
               cols="20"
             />

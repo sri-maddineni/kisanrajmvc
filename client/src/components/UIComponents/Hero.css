@@ -1,0 +1,158 @@
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .buttons {
+    margin: 2rem 1rem;
+  }
+  
+  .buy {
+    width: 6rem;
+    background-color: #222;
+    padding: 0.3rem;
+  }
+  
+  .hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .hero-mid {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    align-items: center;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .hero-text p {
+    font-size: 1.3rem;
+    color: #fff;
+    padding: 0.5rem 0 2rem 0;
+  }
+  
+  .hero-text .show {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  .hero-text input {
+    border-radius: 13px;
+  }
+  
+  .dropdowner {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px gray;
+  
+    position: absolute;
+  
+    left: 30%;
+  
+    width: 40%;
+    border-radius: 5px;
+  }
+  
+  .dropdowner-row {
+    cursor: pointer;
+  
+    margin: 8px 5px;
+  }
+  
+  .dropdowner:empty {
+    border: none;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .hero-text h1 {
+      padding: 10px 20px;
+    }
+  
+    .buy {
+      width: 4rem;
+      padding: 0.3rem;
+      background-color: #222;
+    }
+  
+    .buttons {
+      margin: 2rem 1rem;
+    }
+  
+    .hero-text p {
+      padding: 0 0 2rem 0;
+      font-size: 1.1rem;
+    }
+  
+    .hero-text .show {
+      font-size: 1rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: 6px;
+    }
+  
+    .hero-text {
+      position: absolute;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      align-items: center;
+    }
+  
+    .hero-text input {
+      border-radius: 13px;
+    }
+  
+    .dropdowner {
+      background-color: white;
+      flex-direction: column;
+      width: 50%;
+      align-items: flex-start;
+      border: solid 1px gray;
+  
+      position: absolute;
+  
+      left: 25%;
+      border-radius: 5px;
+  
+      width: 50%;
+      margin: 3px 0;
+    }
+  
+    .dropdowner-row {
+      cursor: pointer;
+      margin: 3px 10px;
+      border: solid 0 0 1px 0 gray;
+    }
+  
+    .dropdowner:empty {
+      border: none;
+    }
+  }
+  

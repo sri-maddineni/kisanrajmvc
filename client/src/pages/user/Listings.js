@@ -48,7 +48,7 @@ const Listings = () => {
                 display: "flex",
                 flexWrap: "wrap",
                 flexDirection: "row",
-                justifyContent:"space-between"
+                justifyContent:"space-around"
               }}
             >
               <>
@@ -76,7 +76,7 @@ const Listings = () => {
                                 {p.organic ? "organic" : "Inorganic"}{" "}
                               </span>
                               <span
-                                style={{ fontSize: "1rem", fontWeight: "600" }}
+                                style={{ fontSize: "0.9rem", fontWeight: "600" }}
                               >
                                 {p.name}
                               </span>{" "}

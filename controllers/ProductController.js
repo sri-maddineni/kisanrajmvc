@@ -7,9 +7,13 @@ import userModel from "../models/userModel.js";
 export const createProductController = async (req, res) => {
     try {
         console.log("Error")
+        
+        const { name, description, price, quantity, shipping, organic } = req.fields;
         console.log(req.files)
-        const { name, slug, description, price, quantity, shipping, organic,quantityUnit } = req.fields;
         const { photo } = req.files;
+
+        console.log(req.fields)
+        
 
         //validation
         switch (true) {
