@@ -2,6 +2,7 @@ import slugify from "slugify";
 import ProductModel from "../models/ProductModel.js"
 import fs from "fs";
 import userModel from "../models/userModel.js";
+import CommodityModel from "../models/CommodityModel.js";
 
 
 export const createProductController = async (req, res) => {
@@ -60,7 +61,7 @@ export const createProductController = async (req, res) => {
 }
 
 
-///get products controller to list posted products
+///get products controller to list posted products only for a user
 
 export const getProductController = async (req, res) => {
     
@@ -88,13 +89,13 @@ export const getProductController = async (req, res) => {
 }
 
 
-//getAllProductController posted by other users
+//getAllProductController posted by other users all products
 
 export const getAllProductController = async (req, res) => {
 
     try {
         const userId = req.user._id;
-        const products = await ProductModel.find({ sellerId: { $ne: userId } }).populate("sellerId").select("-photo").limit(12).sort({ createdAt: -1 })
+        const products = await ProductModel.find({ sellerId: { $ne: userId } }).populate("sellerId").populate("commodityId").select("-photo").limit(12).sort({ createdAt: -1 })
         res.status(200).send({
             success: true,
             message: true,

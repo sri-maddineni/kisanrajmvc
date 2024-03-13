@@ -114,7 +114,7 @@ const SellCommodity = () => {
       <Header />
       <div className="container-fluid m-3 p-3">
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-3" style={{width:"20%"}}>
             <UserMenu />
           </div>
           <div className="col-md-8 text-center m-1" style={{ minHeight: "50vh" }}>

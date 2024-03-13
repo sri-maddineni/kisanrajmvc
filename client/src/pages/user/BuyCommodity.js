@@ -7,11 +7,18 @@ import AdminMenu from "../../components/layouts/AdminMenu";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { Button, Modal } from "antd";
+import Filtersbar from "../../components/Filters/Filtersbar";
+import Link from "antd/es/typography/Link";
+
+import commodities from "../../Data/Commodities";
 
 const BuyCommodity = () => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null); // To store the selected product
+  const [filteredProducts, setFilteredProducts] = useState([]); // To store filtered products
+
+  const [searchitem, setSearchitem] = useState("");
 
   const showModal = (product) => {
     setSelectedProduct(product); // Set the selected product
@@ -22,6 +29,36 @@ const BuyCommodity = () => {
   const [price, setprice] = useState("");
   const [date, setdate] = useState("");
   const [notes, setnotes] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
+  const [suggestions, setSuggestions] = useState([]);
+
+  const filterSuggestions = (input) => {
+    const filtered = commodities.filter((product) =>
+      product.name.toLowerCase().includes(input.toLowerCase())
+    );
+    setSuggestions(filtered.map((product) => product.name));
+  };
+
+  useEffect(() => {
+    if (searchitem && isFocused) {
+      // Only filter suggestions when name is not empty and input is focused
+      filterSuggestions(searchitem);
+    } else {
+      setSuggestions([]); // Clear suggestions when name is empty or input is not focused
+    }
+  }, [searchitem, isFocused]);
+
+  const handleSelect = (suggest) => {
+    setSearchitem(suggest);
+    setSuggestions([]);
+    handleProductFilter(suggest);
+  };
+
+  const handleBlur = () => {
+    setTimeout(() => {
+      setIsFocused(false); // Set input focus state to false after a delay
+    }, 200);
+  };
 
   const handleOk = async (pid, sellerid) => {
     try {
@@ -73,9 +110,9 @@ const BuyCommodity = () => {
       const a =
         Math.sin(dLat / 2) * Math.sin(dLat / 2) +
         Math.cos(deg2rad(userLat)) *
-          Math.cos(deg2rad(sellerLat)) *
-          Math.sin(dLon / 2) *
-          Math.sin(dLon / 2);
+        Math.cos(deg2rad(sellerLat)) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
       const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
       const distance = R * c; // Distance in km
       return distance.toFixed(2);
@@ -162,15 +199,93 @@ const BuyCommodity = () => {
     getAllProducts();
   }, []);
 
+  const handleProductFilter = (productName) => {
+    const filtered = products.filter((product) => product.name === productName);
+    setFilteredProducts(filtered);
+  };
+
+  const handlecategoryFilter = (productcategory) => {
+    const filtered = products.filter(
+      (product) => product.category === productcategory
+    );
+    setFilteredProducts(filtered);
+  };
+
   return (
     <>
       <Header />
       <div className="row m-3">
-        <div style={{ width: "25%" }}>
+        <div style={{ width: "20%" }}>
           {auth.user.role === "0" ? <AdminMenu /> : <UserMenu />}
         </div>
         <div style={{ minHeight: "50vh", width: "70%" }}>
-          <h3 className="text-center">All Products</h3>
+          <div className="container" style={{ position: "relative" }}>
+            <div className="d-flex align-items-center">
+              <input
+                className="form-control mr-sm-2 m-3"
+                type="search"
+                placeholder="Search for products"
+                value={searchitem}
+                onChange={(e) => {
+                  setSearchitem(e.target.value);
+                }}
+                aria-label="Search"
+                onFocus={() => setIsFocused(true)}
+                onBlur={handleBlur}
+              />
+              {searchitem && ( // Render the cross button only when search item is not empty
+                <button
+                  className="fa-solid fa-multiply btn-sm btn"
+                  onClick={() => {
+                    setSearchitem("") 
+                    setFilteredProducts([])
+                
+                }} // Clear the search input when the cross button is clicked
+                ></button>
+              )}
+              <button
+                className="btn btn-outline-info btn-sm m-3"
+                onClick={() => {
+                  handleProductFilter(
+                    searchitem.charAt(0).toUpperCase() + searchitem.slice(1)
+                  );
+                }}
+              >
+                Search
+              </button>
+            </div>
+            {isFocused && suggestions.length > 0 && searchitem && (
+              <ul
+                style={{
+                  listStyle: "none",
+                  position: "absolute",
+                  top: "100%",
+                  left: 0,
+                  width: "100%",
+                  zIndex: 999, // Ensure it's above other elements
+                  backgroundColor: "#fff", // Set background color to match input field
+                  padding: 0,
+                  margin: 0,
+                  boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)", // Add shadow for depth
+                  borderRadius: "0.25rem", // Add rounded corners
+                }}
+              >
+                {suggestions.slice(0, 6).map((suggest, index) => (
+                  <li
+                    key={index}
+                    className="bg-info p-1 m-1"
+                    onClick={() => handleSelect(suggest)}
+                    style={{ cursor: "pointer" }} // Ensure cursor changes to pointer on hover
+                  >
+                    {suggest}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+
+          {/* <Filtersbar onProductSelect={handlecategoryFilter} />*/}
           <div
             style={{
               display: "flex",
@@ -179,67 +294,151 @@ const BuyCommodity = () => {
               justifyContent: "space-around",
             }}
           >
-            {products?.map((p) => (
-              <div
-                className="card m-1 text-center"
-                style={{ width: "18rem" }}
-                key={p._id}
-              >
-                <img
-                  src={`/api/v1/products/product-photo/${p._id}`}
-                  className="card-img-top"
-                  alt={p.name}
-                  style={{ height: "30vh", objectFit: "cover" }}
-                />
-                <div className="card-body">
-                  <h5 className="card-title" style={{ fontSize: "1rem" }}>
-                    {p.organic ? "Organic" : "Inorganic"} {p.name} {p.quality}{" "}
-                    <i className="fa-solid fa-star text-warning"></i>
-                    <br />
-                    {p.description}
-                  </h5>
-                  <p className="card-text" style={{ fontSize: "1rem" }}>
-                    <span className="text-dark bg-warning">
-                      Rs.{p.price}/- per {p.quantity} {p.quantityUnit}s
-                      <br />
-                      (Rs. {(p.price / p.quantity).toFixed(1)} per{" "}
-                      {p.quantityUnit})
-                    </span>
-                  </p>
-
-                  <p style={{fontSize:"0.9rem"}}>
-                  approx. distance to seller : {distance(p.sellerId.latitude, p.sellerId.longitude)} km
-                  </p>
-
-                  <button
-                    className={`btn m-2 btn-${
-                      proposedlist.includes(p._id) ? "danger" : "primary"
-                    } btn-sm`}
-                    onClick={() => {
-                      if (proposedlist.includes(p._id)) {
-                        handleDecline(p._id, p.sellerId._id);
-                      } else {
-                        showModal(p); // Pass the selected product to showModal
-                      }
-                    }}
+            {filteredProducts.length > 0
+              ? filteredProducts.map((p) => (
+                <Link
+                  to={`/dashboard/user/buy-commodity`}
+                  className="text-dark text-decoration-none"
+                >
+                  <div
+                    className="card m-3 text-center"
+                    style={{ width: "18rem" }}
+                    key={p._id}
                   >
-                    {proposedlist.includes(p._id) ? (
-                      <>Decline Offer</>
-                    ) : (
-                      <>Propose Offer</>
-                    )}
-                  </button>
-                  <i
-                    className="fa-solid fa-phone mx-2"
-                    style={{ cursor: "pointer" }}
-                  ></i>
-                  <i
-                    className="fa-brands fa-whatsapp mx-2"
-                    style={{ cursor: "pointer" }}
-                  ></i>
+                    <span
+                      className="position-absolute top-0 translate-middle badge rounded-pill bg-danger text-light"
+                      style={{ left: "90%", zIndex: "1" }}
+                    >
+                      {" "}
+                      {p.commodityId.category}
+                    </span>
+                    <img
+                      src={`/api/v1/products/product-photo/${p._id}`}
+                      className="card-img-top"
+                      alt={p.name}
+                      style={{ height: "30vh", objectFit: "cover" }}
+                    />
+                    <div className="card-body">
+                      <h5 className="card-title" style={{ fontSize: "1rem" }}>
+                        {p.organic ? "Organic" : "Inorganic"} {p.name}{" "}
+                        {p.quality} {p.commodityId.category}
+                        <i className="fa-solid fa-star text-warning"></i>
+                        <br />
+                        {p.description}
+                      </h5>
+                      <p className="card-text" style={{ fontSize: "1rem" }}>
+                        <span className="text-dark bg-warning">
+                          Rs.{p.price}/- per {p.quantity} {p.quantityUnit}s
+                          <br />
+                          (Rs. {(p.price / p.quantity).toFixed(1)} per{" "}
+                          {p.quantityUnit})
+                        </span>
+                      </p>
+
+                      <p style={{ fontSize: "0.9rem" }}>
+                        approx. distance to seller :{" "}
+                        {distance(p.sellerId.latitude, p.sellerId.longitude)}{" "}
+                        km
+                      </p>
+
+                      <button
+                        className={`btn m-2 btn-${proposedlist.includes(p._id) ? "danger" : "primary"
+                          } btn-sm`}
+                        onClick={() => {
+                          if (proposedlist.includes(p._id)) {
+                            handleDecline(p._id, p.sellerId._id);
+                          } else {
+                            showModal(p); // Pass the selected product to showModal
+                          }
+                        }}
+                      >
+                        {proposedlist.includes(p._id) ? (
+                          <>Decline Offer</>
+                        ) : (
+                          <>Propose Offer</>
+                        )}
+                      </button>
+                      <i
+                        className="fa-solid fa-phone mx-2"
+                        style={{ cursor: "pointer" }}
+                      ></i>
+                      <i
+                        className="fa-brands fa-whatsapp mx-2"
+                        style={{ cursor: "pointer" }}
+                      ></i>
+                    </div>
+                  </div>
+                </Link>
+              ))
+              : products.map((p) => (
+                <div
+                  className="card m-3 text-center"
+                  style={{ width: "18rem" }}
+                  key={p._id}
+                >
+                  <span
+                    className="position-absolute top-0 translate-middle badge rounded-pill bg-danger text-light"
+                    style={{ left: "90%", zIndex: "1" }}
+                  >
+                    {" "}
+                    {p.commodityId.category}
+                  </span>
+                  <img
+                    src={`/api/v1/products/product-photo/${p._id}`}
+                    className="card-img-top"
+                    alt={p.name}
+                    style={{ height: "30vh", objectFit: "cover" }}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title" style={{ fontSize: "1rem" }}>
+                      {p.organic ? "Organic" : "Inorganic"} {p.name}{" "}
+                      {p.quality} {p.commodityId.category}
+                      <i className="fa-solid fa-star text-warning"></i>
+                      <br />
+                      {p.description}
+                    </h5>
+                    <p className="card-text" style={{ fontSize: "1rem" }}>
+                      <span className="text-dark bg-warning">
+                        Rs.{p.price}/- per {p.quantity} {p.quantityUnit}s
+                        <br />
+                        (Rs. {(p.price / p.quantity).toFixed(1)} per{" "}
+                        {p.quantityUnit})
+                      </span>
+                    </p>
+
+                    <p style={{ fontSize: "0.9rem" }}>
+                      approx. distance to seller :{" "}
+                      {distance(p.sellerId.latitude, p.sellerId.longitude)} km
+                    </p>
+
+                    <button
+                      className={`btn m-2 btn-${proposedlist.includes(p._id) ? "danger" : "primary"
+                        } btn-sm`}
+                      onClick={() => {
+                        if (proposedlist.includes(p._id)) {
+                          handleDecline(p._id, p.sellerId._id);
+                        } else {
+                          showModal(p); // Pass the selected product to showModal
+                        }
+                      }}
+                    >
+                      {proposedlist.includes(p._id) ? (
+                        <>Decline Offer</>
+                      ) : (
+                        <>Propose Offer</>
+                      )}
+                    </button>
+                    <i
+                      className="fa-solid fa-phone mx-2"
+                      style={{ cursor: "pointer" }}
+                    ></i>
+                    <i
+                      className="fa-brands fa-whatsapp mx-2"
+                      style={{ cursor: "pointer" }}
+                    ></i>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
           </div>
         </div>
       </div>
@@ -314,7 +513,6 @@ const BuyCommodity = () => {
           />
         </div>
       </Modal>
-
       <Footer />
     </>
   );
