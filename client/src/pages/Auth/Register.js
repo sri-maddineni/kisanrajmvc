@@ -4,6 +4,7 @@ import Footer from "../../components/layouts/Footer";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
+import Navbar from "../../components/UIComponents/Navbar";
 
 export const Register = () => {
   const [name, setName] = useState("");
@@ -73,7 +74,7 @@ export const Register = () => {
     <>
       <Header />
       <Toaster />
-      <div className="total text-center my -5">
+      <div className="total text-center">
         <div className="register my-5">
           <h1 className="my-2">Register user</h1>
           <form className="text-center m-3" onSubmit={handleSubmit}>

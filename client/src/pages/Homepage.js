@@ -4,6 +4,8 @@ import Footer from "../components/layouts/Footer";
 import { Toaster } from "react-hot-toast";
 import "./Homepage.css";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../components/UIComponents/Navbar";
+
 
 export const Homepage = () => {
 
@@ -11,7 +13,7 @@ export const Homepage = () => {
 
   return (
     <>
-      <Header />
+      <Header/>
       <Toaster />
       <div
         className="container"
@@ -36,9 +38,9 @@ export const Homepage = () => {
           
         </div>
         <div>
-          <button className="btn btn-md btn-outline-info m-2" style={{width:"4rem",padding:"0.3rem",borderRadius:"0.4rem"}} onClick={()=>{navigate("/dashboard/user/buy-commodity")}}>Buy</button>
-          <button className="btn btn-md btn-outline-info m-2" style={{width:"4rem",padding:"0.3rem",borderRadius:"0.4rem"}} onClick={()=>{navigate("/dashboard/user/sell-commodity")}}>Sell</button>
-          <button className="btn btn-md btn-outline-info m-2" style={{width:"4rem",padding:"0.3rem",borderRadius:"0.4rem"}} onClick={()=>{navigate("/dashboard/user/hire-equipment")}}>Hire</button>
+          <button className="btn btn-md btn-info m-2" style={{width:"4rem",padding:"0.3rem",borderRadius:"0.4rem"}} onClick={()=>{navigate("/dashboard/user/buy-commodity")}}>Buy</button>
+          <button className="btn btn-md btn-info m-2" style={{width:"4rem",padding:"0.3rem",borderRadius:"0.4rem"}} onClick={()=>{navigate("/dashboard/user/sell-commodity")}}>Sell</button>
+          <button className="btn btn-md btn-info m-2" style={{width:"4rem",padding:"0.3rem",borderRadius:"0.4rem"}} onClick={()=>{navigate("/dashboard/user/hire-equipment")}}>Hire</button>
         </div>
       </div>
       <Footer />

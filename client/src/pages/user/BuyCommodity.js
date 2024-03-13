@@ -12,6 +12,7 @@ import Link from "antd/es/typography/Link";
 
 import commodities from "../../Data/Commodities";
 
+
 const BuyCommodity = () => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
@@ -213,7 +214,7 @@ const BuyCommodity = () => {
 
   return (
     <>
-      <Header />
+      <Header/>
       <div className="row m-3">
         <div style={{ width: "20%" }}>
           {auth.user.role === "0" ? <AdminMenu /> : <UserMenu />}

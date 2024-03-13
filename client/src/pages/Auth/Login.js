@@ -4,9 +4,10 @@ import Footer from "../../components/layouts/Footer";
 import axios from "axios"
 
 import { useContext } from 'react';
-import { useNavigate,useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import AuthContext from "../../context/AuthContext";
+import Navbar from "../../components/UIComponents/Navbar";
 
 
 export const Login = () => {
@@ -15,7 +16,7 @@ export const Login = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
-  const location=useLocation();
+  const location = useLocation();
 
   const [auth, setAuth] = useContext(AuthContext);
 
@@ -51,10 +52,12 @@ export const Login = () => {
 
   return (
     <>
+
       <Header />
 
-      <div className="total text-center my -5">
-        <div className="register my-5">
+
+      <div className="total text-center my-2" style={{ marginTop: "10vh" }}>
+        <div className="register my-3">
           <h1 className="my-2">Login user</h1>
           <form className="text-center m-3" onSubmit={handlesubmit}>
 
@@ -89,10 +92,10 @@ export const Login = () => {
             </button>
             <div className="m-3">
               {/*eslint-disable-next-line}*/}
-            <a className="m-2" href="#" onClick={()=>{navigate("/forgot-password")}}>Forgot password</a>
-            
-            
-           
+              <a className="m-2" href="#" onClick={() => { navigate("/forgot-password") }}>Forgot password</a>
+
+
+
             </div>
 
             {/*
@@ -101,8 +104,8 @@ export const Login = () => {
             <label htmlFor="">Accept terms and conditions</label>
           </div>
           */}
-        
-            
+
+
           </form>
         </div>
 

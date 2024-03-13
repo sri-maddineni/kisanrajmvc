@@ -36,7 +36,7 @@ const Listings = () => {
   return (
     <>
       <Header />
-      <div className="container-fluid m-3 p-3">
+      <div className="container-fluid m-3 p-1">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />
@@ -54,7 +54,7 @@ const Listings = () => {
               <>
                 {products.length ? (
                   products.map((p) => (
-                    <div className="m-2" key={p._id}>
+                    <div className="m-1" key={p._id}>
                       <Link
                         to={`/dashboard/user/product/${p._id}`}
                         className="text-dark text-decoration-none"

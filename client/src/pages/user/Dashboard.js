@@ -2,6 +2,7 @@ import React from 'react'
 import Header from '../../components/layouts/Header'
 import Footer from '../../components/layouts/Footer'
 import UserMenu from './UserMenu'
+import Navbar from '../../components/UIComponents/Navbar'
 
 
 const Dashboard = () => {
@@ -15,16 +16,16 @@ const Dashboard = () => {
                         <UserMenu />
                     </div>
                     <div className="col-md-8">
-                    <div className='text-center'>
-                    <h1 className='text-center'>user Dash board</h1>
-                        
+                        <div className='text-center'>
+                            <h1 className='text-center'>user Dash board</h1>
 
-                        
+
+
+                        </div>
                     </div>
                 </div>
-                </div>
 
-                
+
             </div>
 
             <Footer />

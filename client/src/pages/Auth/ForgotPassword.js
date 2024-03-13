@@ -2,7 +2,7 @@ import React from 'react'
 import Header from '../../components/layouts/Header'
 import Footer from '../../components/layouts/Footer'
 import toast from 'react-hot-toast'
-import {  useState } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
@@ -11,8 +11,6 @@ const ForgotPassword = () => {
     const [email, setemail] = useState("");
     const [newPassword, setnewPassword] = useState("");
     const [answer, setanswer] = useState("");
-
-
 
     const navigate = useNavigate();
 
@@ -39,9 +37,9 @@ const ForgotPassword = () => {
     return (
         <>
             <Header />
-            <div><h1 className='text-center m-5'>Reset password</h1></div>
-            <div className="total text-center my -5">
-                <div className="register my-5">
+            <div><h1 className='text-center m-2'>Reset password</h1></div>
+            <div className="total text-center my-2">
+                <div className="register my-2">
                     <form className="text-center m-3" onSubmit={handlesubmit}>
 
                         <div className="mb-3">

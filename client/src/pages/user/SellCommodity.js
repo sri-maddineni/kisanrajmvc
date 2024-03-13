@@ -196,9 +196,7 @@ const SellCommodity = () => {
               <div className="mb-3">
                 <input type="text" value={description} placeholder='Enter description' className='form-control' onChange={(e) => setDescription(e.target.value)} />
               </div>
-              <div className="mb-3">
-                <input type="text" value={location} placeholder='Enter location' className='form-control' onChange={(e) => setLocation(e.target.value)} />
-              </div>
+              
 
 
 
