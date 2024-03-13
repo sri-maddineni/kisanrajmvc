@@ -5,6 +5,7 @@ import { Toaster } from "react-hot-toast";
 import "./Homepage.css";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/UIComponents/Navbar";
+import Nav from "../components/UIComponents/Nav";
 
 
 export const Homepage = () => {
@@ -13,7 +14,7 @@ export const Homepage = () => {
 
   return (
     <>
-      <Header/>
+      <Nav/>
       <Toaster />
       <div
         className="container"

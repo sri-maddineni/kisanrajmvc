@@ -3,7 +3,7 @@ import Header from "../../components/layouts/Header";
 import Footer from "../../components/layouts/Footer";
 import UserMenu from "./UserMenu";
 import axios from "axios";
-
+import Nav from '../../components/UIComponents/Nav';
 import AuthContext from "../../context/AuthContext";
 import { Link } from "react-router-dom";
 
@@ -67,7 +67,7 @@ const ProposalsRecieved = () => {
 
   return (
     <>
-      <Header />
+      <Nav/>
       <div className="container-fluid m-3 p-1">
         <div className="row">
           <div className="col-md-3">
@@ -88,8 +88,8 @@ const ProposalsRecieved = () => {
                         <>
                           <img
                             src={`/api/v1/products/product-photo/${productId}`}
-                            alt=""
-                            style={{ minHeight: "20vh" }}
+                            alt="ima"
+                            style={{ minHeight: "20vh", width: "90%" }}
                           />
                           <p className="card-text">
                             Product Name: {productData[productId].name}

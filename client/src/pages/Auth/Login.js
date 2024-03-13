@@ -8,6 +8,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import AuthContext from "../../context/AuthContext";
 import Navbar from "../../components/UIComponents/Navbar";
+import Nav from "../../components/UIComponents/Nav";
 
 
 export const Login = () => {
@@ -53,52 +54,53 @@ export const Login = () => {
   return (
     <>
 
-      <Header />
+      <Nav />
+
+      <div className="d-flex justify-content-between">
+        <div className=""></div>
+        <div className="my-2" style={{ marginTop: "10vh" }}>
+          <div className="register my-3">
+            <h1 className="my-2 text-center">Login user</h1>
+            <form className="text-center m-3" onSubmit={handlesubmit}>
+
+              <div className="mb-3">
+                <input
+                  type="text"
+                  className="form-control"
+
+                  value={email}
+                  onChange={(e) => { setemail(e.target.value) }}
+                  placeholder="Enter Email"
+                  required
+                />
+
+              </div>
+
+              <div className="mb-3">
+                <input
+                  type="password"
+                  className="form-control"
+
+                  value={password}
+                  onChange={(e) => { setpassword(e.target.value) }}
+                  placeholder="Enter password"
+                  required
+                />
+
+              </div>
+
+              <button type="submit" className="btn btn-primary">
+                Login
+              </button>
+              <div className="m-3">
+                {/*eslint-disable-next-line}*/}
+                <a className="m-2" href="#" onClick={() => { navigate("/forgot-password") }}>Forgot password</a>
 
 
-      <div className="total text-center my-2" style={{ marginTop: "10vh" }}>
-        <div className="register my-3">
-          <h1 className="my-2">Login user</h1>
-          <form className="text-center m-3" onSubmit={handlesubmit}>
 
-            <div className="mb-3">
-              <input
-                type="text"
-                className="form-control"
+              </div>
 
-                value={email}
-                onChange={(e) => { setemail(e.target.value) }}
-                placeholder="Enter Email"
-                required
-              />
-
-            </div>
-
-            <div className="mb-3">
-              <input
-                type="password"
-                className="form-control"
-
-                value={password}
-                onChange={(e) => { setpassword(e.target.value) }}
-                placeholder="Enter password"
-                required
-              />
-
-            </div>
-
-            <button type="submit" className="btn btn-primary">
-              Login
-            </button>
-            <div className="m-3">
-              {/*eslint-disable-next-line}*/}
-              <a className="m-2" href="#" onClick={() => { navigate("/forgot-password") }}>Forgot password</a>
-
-
-
-            </div>
-
-            {/*
+              {/*
           <div className="mb-3 form-check">
             <input type="checkbox" className="form-check-input" id="exampleCheck1" />
             <label htmlFor="">Accept terms and conditions</label>
@@ -106,10 +108,13 @@ export const Login = () => {
           */}
 
 
-          </form>
-        </div>
+            </form>
+          </div>
 
+        </div>
+        <div className=""></div>
       </div>
+
       <Footer />
     </>
 

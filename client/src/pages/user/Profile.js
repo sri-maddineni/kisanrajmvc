@@ -4,13 +4,14 @@ import Footer from "../../components/layouts/Footer";
 import UserMenu from "./UserMenu";
 import AuthContext from "../../context/AuthContext";
 import AdminMenu from "../../components/layouts/AdminMenu";
+import Nav from "../../components/UIComponents/Nav";
 
 const Profile = () => {
     const [auth] = useContext(AuthContext);
 
     return (
         <>
-            <Header />
+            <Nav />
            
                 <div className="row m-3">
                     <div className="col-md-3">

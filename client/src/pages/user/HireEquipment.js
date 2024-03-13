@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import UserMenu from './UserMenu';
 import AuthContext from '../../context/AuthContext';
 import { isMobile } from 'react-device-detect';
+import Nav from '../../components/UIComponents/Nav';
 
 const HireEquipment = () => {
     const [auth] = useContext(AuthContext);
@@ -64,7 +65,7 @@ const HireEquipment = () => {
 
     return (
         <>
-            <Header />
+            <Nav />
             <div className="container-fluid m-3 p-3">
                 <div className="row">
                     <div className="col-md-3">

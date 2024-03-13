@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import Navbar from "../../components/UIComponents/Navbar";
+import Nav from "../../components/UIComponents/Nav";
 
 export const Register = () => {
   const [name, setName] = useState("");
@@ -72,11 +73,12 @@ export const Register = () => {
 
   return (
     <>
-      <Header />
+      <Nav />
       <Toaster />
-      <div className="total text-center">
-        <div className="register my-5">
-          <h1 className="my-2">Register user</h1>
+      <div className="d-flex justify-content-between">
+        <div className=""></div>
+        <div className="register my-2">
+          <h1 className="my-2 text-center">Register user</h1>
           <form className="text-center m-3" onSubmit={handleSubmit}>
             <div className="mb-3">
               <input
@@ -203,6 +205,7 @@ export const Register = () => {
             </button>
           </form>
         </div>
+        <div className=""></div>
       </div>
       <Footer />
     </>

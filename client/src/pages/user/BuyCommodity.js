@@ -11,6 +11,7 @@ import Filtersbar from "../../components/Filters/Filtersbar";
 import Link from "antd/es/typography/Link";
 
 import commodities from "../../Data/Commodities";
+import Nav from "../../components/UIComponents/Nav";
 
 
 const BuyCommodity = () => {
@@ -214,12 +215,10 @@ const BuyCommodity = () => {
 
   return (
     <>
-      <Header/>
+      <Nav/>
       <div className="row m-3">
-        <div style={{ width: "20%" }}>
-          {auth.user.role === "0" ? <AdminMenu /> : <UserMenu />}
-        </div>
-        <div style={{ minHeight: "50vh", width: "70%" }}>
+        
+        <div style={{ minHeight: "50vh", width: "100%" }}>
           <div className="container" style={{ position: "relative" }}>
             <div className="d-flex align-items-center">
               <input
@@ -292,7 +291,7 @@ const BuyCommodity = () => {
               display: "flex",
               flexDirection: "row",
               flexWrap: "wrap",
-              justifyContent: "space-around",
+              justifyContent: "space-evenly",
             }}
           >
             {filteredProducts.length > 0
@@ -322,7 +321,7 @@ const BuyCommodity = () => {
                     <div className="card-body">
                       <h5 className="card-title" style={{ fontSize: "1rem" }}>
                         {p.organic ? "Organic" : "Inorganic"} {p.name}{" "}
-                        {p.quality} {p.commodityId.category}
+                        {p.quality} 
                         <i className="fa-solid fa-star text-warning"></i>
                         <br />
                         {p.description}
@@ -393,7 +392,7 @@ const BuyCommodity = () => {
                   <div className="card-body">
                     <h5 className="card-title" style={{ fontSize: "1rem" }}>
                       {p.organic ? "Organic" : "Inorganic"} {p.name}{" "}
-                      {p.quality} {p.commodityId.category}
+                      {p.quality} 
                       <i className="fa-solid fa-star text-warning"></i>
                       <br />
                       {p.description}

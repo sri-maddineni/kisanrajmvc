@@ -7,6 +7,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { format } from "date-fns";
+import Nav from "../../components/UIComponents/Nav";
 
 const Listings = () => {
   const [products, setProducts] = useState([]);
@@ -35,7 +36,7 @@ const Listings = () => {
 
   return (
     <>
-      <Header />
+      <Nav />
       <div className="container-fluid m-3 p-1">
         <div className="row">
           <div className="col-md-3">

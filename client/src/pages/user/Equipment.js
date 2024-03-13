@@ -5,6 +5,7 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 import UserMenu from './UserMenu';
 import AuthContext from '../../context/AuthContext';
+import Nav from '../../components/UIComponents/Nav';
 
 const Equipment = () => {
     const [equipmentDesc, setEquipmentDesc] = useState('');
@@ -69,7 +70,7 @@ const Equipment = () => {
 
     return (
         <>
-            <Header />
+            <Nav />
             <div className="container-fluid m-3 p-3">
                 <div className="row">
                     <div className="col-md-3">

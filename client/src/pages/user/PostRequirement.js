@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import UserMenu from "./UserMenu";
 import AuthContext from "../../context/AuthContext";
 import commodities from "../../Data/Commodities"; // Import the data from Commodities.js
+import Nav from "../../components/UIComponents/Nav";
 
 const PostRequirement = () => {
   const navigate = useNavigate();
@@ -106,7 +107,7 @@ const PostRequirement = () => {
 
   return (
     <>
-      <Header />
+      <Nav />
       <div className="container-fluid m-3 p-3">
         <div className="row">
           <div className="col-md-3">
