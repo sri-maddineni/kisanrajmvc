@@ -8,13 +8,13 @@ import CommodityModel from "../models/CommodityModel.js";
 export const createProductController = async (req, res) => {
     try {
         console.log("Error")
-        
+
         const { name, description, price, quantity, shipping, organic } = req.fields;
         console.log(req.files)
         const { photo } = req.files;
 
         console.log(req.fields)
-        
+
 
         //validation
         switch (true) {
@@ -64,9 +64,9 @@ export const createProductController = async (req, res) => {
 ///get products controller to list posted products only for a user
 
 export const getProductController = async (req, res) => {
-    
+
     try {
-        
+
         const userId = req.user._id;
         const products = await ProductModel.find({ sellerId: userId }).populate("sellerId").select("-photo").sort({ createdAt: -1 })
         res.status(200).send({
@@ -90,26 +90,65 @@ export const getProductController = async (req, res) => {
 
 
 //getAllProductController posted by other users all products
-
+//for not loggedin users
 export const getAllProductController = async (req, res) => {
-
     try {
-        const userId = req.user._id;
-        const products = await ProductModel.find({ sellerId: { $ne: userId } }).populate("sellerId").populate("commodityId").select("-photo").limit(12).sort({ createdAt: -1 })
+
+        let products;
+
+        products = await ProductModel.find()
+            .populate("sellerId")
+            .populate("commodityId")
+            .select("-photo")
+            .limit(12)
+            .sort({ createdAt: -1 });
+
+
         res.status(200).send({
             success: true,
-            message: true,
             message: "All products",
             products,
-            totalcount: products.length,
-        })
+            totalCount: products.length,
+        });
     } catch (error) {
-        console.log(error)
+        console.log(error);
         res.status(500).send({
             success: false,
             message: "Error in getting products",
-            error
-        })
+            error,
+        });
+    }
+};
+
+//for loggedin users
+export const getProductsController = async (req, res) => {
+    try {
+
+        let products;
+
+        const userId=req.user._id;
+
+        products = await ProductModel.find({ sellerId: { $ne: userId } })
+            .populate("sellerId")
+            .populate("commodityId")
+            .select("-photo")
+            .limit(12)
+            .sort({ createdAt: -1 });
+
+
+        res.status(200).send({
+            success: true,
+            message: "All products",
+            products,
+            totalCount: products.length,
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({
+            success: false,
+            message: "Error in getting products",
+            error,
+        });
     }
 }
 
@@ -360,7 +399,7 @@ export const proposalsRecievedList = async (req, res) => {
 //export const proposeOffer
 export const proposeOffer = async (req, res) => {
     try {
-        const {  buyerId, productId, sellerId  } = req.body;
+        const { buyerId, productId, sellerId } = req.body;
 
         // Validation for required fields
         if (!buyerId || !productId || !sellerId) {
@@ -421,7 +460,7 @@ export const proposeOffer = async (req, res) => {
 
 export const declineoffer = async (req, res) => {
     try {
-        const { buyerid, pid , sellerid} = req.body;
+        const { buyerid, pid, sellerid } = req.body;
 
         if (!buyerid) {
             console.log("userid not found")

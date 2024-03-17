@@ -12,7 +12,8 @@ import {
     proposeOffer,
     proposedListController,
     declineoffer,
-    proposalsRecievedList
+    proposalsRecievedList,
+    getProductsController
 }
     from "../controllers/ProductController.js";
 import formidable from "express-formidable";
@@ -23,11 +24,14 @@ const router = express.Router();
 
 router.post('/create-product', requireSignIn, formidable(), createProductController)
 
-//get all posted products only
+//get all posted products only for listings
 router.get("/get-posted-products", requireSignIn, isUser, getProductController)
 
 //get all products
-router.get("/get-all-products", requireSignIn, isUser, getAllProductController)
+router.get("/get-all-product", getAllProductController)
+
+//for loggedin user get products to buy
+router.get("/get-all-products",requireSignIn,isUser, getProductsController)
 
 //get single product
 router.get("/get-product/:id", requireSignIn, isUser, getSingleProductController)

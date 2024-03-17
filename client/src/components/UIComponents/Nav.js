@@ -38,7 +38,7 @@ export default function Nav() {
                                     Buy
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><Link className="dropdown-item" to="/dashboard/user/buy-commodity" >Buy Commodity</Link></li>
+                                    <li><Link className="dropdown-item" to={auth?.user? "/dashboard/user/buy-commodity":"/buy-commodity"} >Buy Commodity</Link></li>
                                     <li><Link className="dropdown-item" to="/cp" >Buy Equipment</Link></li>
 
                                 </ul>
@@ -58,7 +58,7 @@ export default function Nav() {
                                     Hire
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><Link className="dropdown-item" to="/mess" >Hire Equipment</Link></li>
+                                    <li><Link className="dropdown-item" to="/user/hire-equipment" >Hire Equipment</Link></li>
                                     <li><Link className="dropdown-item" to="/cp" >Hire Cold Storages</Link></li>
 
                                 </ul>
@@ -75,7 +75,7 @@ export default function Nav() {
                             </li>
 
                             <li className="nav-item">
-                                <Link className="nav-link active p-3" aria-current="page" to="/rooms">Cold Storages</Link>
+                                <Link className="nav-link active p-3" aria-current="page" to="/coldstorages">Cold Storages</Link>
                             </li>
 
                             { /*<li className="nav-item">
@@ -106,7 +106,7 @@ export default function Nav() {
                                         </a>
                                         <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <li><Link className="dropdown-item" to="/dashboard/user/proposals-recieved" >Proposals Recieved</Link></li>
-                                            <li><Link className="dropdown-item" to="/cp" >Negotiations History</Link></li>
+                                            <li><Link className="dropdown-item" to="/dashboard/user/history/negotiations" >Negotiations History</Link></li>
 
                                         </ul>
                                     </li>
@@ -121,16 +121,24 @@ export default function Nav() {
                                         </ul>
                                     </li>
                                     <li className="nav-item">
-                                        <Link className="nav-link active p-3" aria-current="page" to="/rooms">Orders</Link>
+                                        <Link className="nav-link active p-3" aria-current="page" to="/Orders">Orders</Link>
                                     </li>
 
                                     <li className="nav-item dropdown active m-2">
-                                        <a className="nav-link me-auto text-white disabled" href='#' data-bs-toggle="dropdown">{auth?.user?.name}   <i class="fa-solid fa-sort-down"></i></a>
+                                        <a className="nav-link me-auto text-white disabled" href='#' data-bs-toggle="dropdown">{auth?.user?.name}   <i className="fa-solid fa-sort-down"></i></a>
                                         <ul className="dropdown-menu">
-                                            <li><Link className="dropdown-item" to="/user/profile"> Profile</Link></li>
+                                            <li><Link className="dropdown-item" to="/dashboard/user/profile"> Profile</Link></li>
                                             <li><a className="dropdown-item" onClick={handleLogout}> Logout </a></li>
                                         </ul>
                                     </li>
+                                    <li className="nav-item dropdown active m-2">
+                                        <a className="nav-link me-auto text-white disabled" href='#' data-bs-toggle="dropdown">Language   <i className="fa-solid fa-sort-down"></i></a>
+                                        <ul className="dropdown-menu">
+                                            <li><Link className="dropdown-item" to="/dashboard/user/profile"> Telugu</Link></li>
+                                            <li><a className="dropdown-item" onClick={handleLogout}> English </a></li>
+                                        </ul>
+                                    </li>
+                                    
                                 </ul>
                             </>
                         )}

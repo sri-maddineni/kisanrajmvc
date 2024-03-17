@@ -1,6 +1,7 @@
 import e from "express";
 import PotentialModel from "../models/PotentialModel.js";
 import RequirementModel from "../models/RequirementModel.js";
+import NegHistory from "../models/NegHistoryModel.js"
 import slugify from "slugify";
 
 export const postRequirementController = async (req, res) => {
@@ -10,23 +11,71 @@ export const postRequirementController = async (req, res) => {
     // Generate combinedId
     const combinedId = `${sellerId}_${productId}_${buyerId}`;
 
-    const requirement = await RequirementModel.create({
-      quantity,
-      price,
-      date,
-      notes,
-      buyerId,
-      sellerId,
-      productId,
-      sentBy,
-      combinedId,
-    });
+    // Finding documents with the given combinedId
+    const exist = await RequirementModel.find({ combinedId });
 
-    res.status(201).send({
-      success: true,
-      message: "Requirement created successfully!",
-      requirement,
-    });
+    if (exist.length > 0) { // Check if any documents were found
+      // Assuming you want to update the first document found with the given combinedId
+      const requirement1 = await RequirementModel.findOneAndUpdate(
+        { combinedId },
+        {
+          quantity,
+          price,
+          date,
+          notes,
+          buyerId,
+          sellerId,
+          productId,
+          sentBy,
+          combinedId,
+        },
+        { new: true } // to return the updated document
+      );
+    } else {
+      // If no documents were found, you might want to insert a new document
+      // Assuming RequirementModel.create() is a method to insert a new document
+      const newRequirement = await RequirementModel.create({
+        quantity,
+        price,
+        date,
+        notes,
+        buyerId,
+        sellerId,
+        productId,
+        sentBy,
+        combinedId,
+      });
+
+      const requirement2 = await NegHistory.create({
+        quantity,
+        price,
+        date,
+        notes,
+        buyerId,
+        sellerId,
+        productId,
+        sentBy,
+        combinedId,
+      });
+
+      if (newRequirement && requirement2) {
+        res.status(201).send({
+          success: true,
+          message: "Requirement created successfully!",
+          newRequirement,
+          requirement2,
+        });
+      }
+      else {
+        console.log("some thing went wrong")
+        res.status(110).send({
+          success: false,
+          message: "Error in creating requirement",
+
+        })
+      }
+    }
+
   } catch (error) {
     console.log(error);
     res.status(500).send({
@@ -183,7 +232,7 @@ export const getProductPotentialController = async (req, res) => {
   try {
     const { productName } = req.body;
 
-   
+
 
     if (!productName) {
       return res.status(400).json({
@@ -211,7 +260,7 @@ export const getProductPotentialController = async (req, res) => {
 
 
   } catch (error) {
-    
+
     console.error("Error in fetching potentials:", error);
     res.status(500).send({
       success: false,
@@ -220,3 +269,40 @@ export const getProductPotentialController = async (req, res) => {
     });
   }
 };
+
+
+export const postToNegHisRequirementController = async (req, res) => {
+
+  try {
+    const { quantity, price, date, notes, buyerId, sellerId, productId, sentBy } = req.body;
+
+    // Generate combinedId
+    const combinedId = `${sellerId}_${productId}_${buyerId}`;
+
+    const requirement = await NegHistory.create({
+      quantity,
+      price,
+      date,
+      notes,
+      buyerId,
+      sellerId,
+      productId,
+      sentBy,
+      combinedId,
+    });
+
+    res.status(201).send({
+      success: true,
+      message: "Requirement created successfully!",
+      requirement,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: false,
+      message: "Error in creating requirement",
+      error,
+    });
+  }
+
+}

@@ -185,12 +185,21 @@ const BuyCommodity = () => {
 
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get(
-        `${process.env.REACT_APP_API}/api/v1/products/get-all-products`
-      );
-      if (data?.success) {
-        setProducts(data?.products);
+      if(auth?.user){
+        const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/products/get-all-products`);
+        if (data?.success) {
+          setProducts(data?.products);
+        }
       }
+      else{
+        
+        const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/products/get-all-product`);
+        if (data?.success) {
+          setProducts(data?.products);
+        }
+
+      }
+      
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong in getting all products!");
@@ -216,7 +225,9 @@ const BuyCommodity = () => {
   return (
     <>
       <Nav/>
+      
       <div className="row m-3">
+      
         
         <div style={{ minHeight: "50vh", width: "100%" }}>
           <div className="container" style={{ position: "relative" }}>
@@ -361,6 +372,7 @@ const BuyCommodity = () => {
                       <i
                         className="fa-solid fa-phone mx-2"
                         style={{ cursor: "pointer" }}
+                        onClick={()=>{}}
                       ></i>
                       <i
                         className="fa-brands fa-whatsapp mx-2"

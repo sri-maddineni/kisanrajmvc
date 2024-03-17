@@ -70,19 +70,17 @@ const ProposalsRecieved = () => {
       <Nav/>
       <div className="container-fluid m-3 p-1">
         <div className="row">
-          <div className="col-md-3">
-            <UserMenu />
-          </div>
-          <div className="col-md-8 text-center" style={{ minHeight: "50vh" }}>
+          
+          <div className="text-center" style={{ minHeight: "50vh" }}>
             <div className="container">
               <h1>
-                {activeSection === "responses" ? "Responses" : "Negotiations"}
+                {activeSection === "responses" ? "Proposals Recieved" : "Negotiations"}
               </h1>
             </div>
             <div className="row">
               {Object.entries(proposals).map(([productId, count]) => (
                 <div className="col-md-4 mb-4" key={productId}>
-                  <div className="card">
+                  <div className="card" style={{width:"18rem"}}>
                     <div className="card-body">
                       {productData[productId] ? (
                         <>
@@ -98,10 +96,10 @@ const ProposalsRecieved = () => {
                             Description: {productData[productId].description}
                           </p>
                           <p className="card-text">
-                            Price: {productData[productId].price}
+                            Price: {productData[productId].price}/- 
                           </p>
                           <p className="card-text">
-                            Quantity: {productData[productId].quantity}
+                            Quantity: {productData[productId].quantity} {productData[productId].quantityUnit}s
                           </p>
                         </>
                       ) : (

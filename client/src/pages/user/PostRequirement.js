@@ -97,6 +97,13 @@ const PostRequirement = () => {
 
       if (data?.data.success) {
         toast.success("success");
+        setproductName("")
+        setPrice("")
+        setNotes("")
+        setdate("")
+        setQuantity("")
+        setQuantityUnit("")
+        setShipping("")
         
       }
     } catch (error) {
@@ -110,11 +117,9 @@ const PostRequirement = () => {
       <Nav />
       <div className="container-fluid m-3 p-3">
         <div className="row">
-          <div className="col-md-3">
-            <UserMenu />
-          </div>
+          
           <div
-            className="col-md-8 text-center m-1"
+            className="text-center m-1"
             style={{ minHeight: "50vh" }}
           >
             <h3>Fill Product details</h3>

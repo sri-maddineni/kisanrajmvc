@@ -33,8 +33,7 @@ import Equipment from "./pages/user/Equipment"
 import HireEquipment from "./pages/user/HireEquipment"
 import EquipmentListing from "./pages/user/EquipmentListing"
 import PostRequirement from "./pages/user/PostRequirement"
-
-
+import NegHistoy from './pages/user/NegHistory'
 
 
 
@@ -49,33 +48,30 @@ function App() {
         <Routes>
           <Route path='/' element={<Homepage />} />
 
-          <Route path='/' element={<PrivateRoute />}>
-          <Route path='user/profile' element={<Profile />} />
-          </Route>
+          
 
+          //private routes
 
 
           <Route path='/dashboard' element={<PrivateRoute />}>
             <Route path='user' element={<Dashboard />} />
-            <Route path='user/proposals-recieved' element={<ProposalsRecieved/>}/>
-            <Route path='user/proposals-sent' element={<ProposalsSent/>}/>
+            <Route path='user/proposals-recieved' element={<ProposalsRecieved />} />
+
             <Route path='user/orders' element={<Orders />} />
             <Route path='user/listings-posted' element={<Listings />} />
             <Route path='user/profile' element={<Profile />} />
             <Route path='user/product/:pid' element={<UpdateProduct />} />
             <Route path='user/sell-commodity' element={<SellCommodity />} />
-
-
             <Route path='user/buy-commodity' element={<BuyCommodity />} />
 
+            <Route path='user/history/negotiations' element={<NegHistoy />} />
 
-            <Route path='user/responses/:pid' element={<Responses/>} />
-          
-            <Route path='user/post-potential' element={<PostRequirement/>} />
-            
-            <Route path='user/post-equipment' element={<Equipment/>} />
-            <Route path='user/hire-equipment' element={<HireEquipment/>}/>
-            <Route path='user/my-equipment-listing' element={<EquipmentListing/>}/>
+            <Route path='user/responses/:pid' element={<Responses />} />
+            <Route path='user/post-potential' element={<PostRequirement />} />
+
+            <Route path='user/post-equipment' element={<Equipment />} />
+            <Route path='user/hire-equipment' element={<HireEquipment />} />
+            <Route path='user/my-equipment-listing' element={<EquipmentListing />} />
           </Route>
 
           <Route path='/dashboard' element={<AdminRoute />}>
@@ -85,7 +81,7 @@ function App() {
             <Route path='admin/product/:pid' element={<UpdateProduct />} />
             <Route path='admin/users' element={<Users />} />
             <Route path='admin/products' element={<Products />} />
-            <Route path='user/create-equipment-category' element={<EquipmentCategory/>} />
+            <Route path='user/create-equipment-category' element={<EquipmentCategory />} />
           </Route>
 
 
@@ -95,8 +91,10 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<Login />} />
-          <Route path='/*' element={<Pagenotfound />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/*' element={<Pagenotfound />} />
+
+          <Route path='/buy-commodity' element={<BuyCommodity />} />
         </Routes>
 
       </AuthState>

@@ -4,7 +4,8 @@ import {
     getRequirementController, 
     postPotentialController, 
     getPotentialController, 
-    getProductPotentialController
+    getProductPotentialController,
+    postToNegHisRequirementController
  } from "../controllers/RequirementController.js";
 
 import { isAdmin, isUser, requireSignIn } from "../middlewares/authMiddleware.js";
@@ -14,6 +15,9 @@ const router = express.Router();
 
 //register user method post
 router.post("/post-requirement", postRequirementController);
+
+//save to neg history for posted requirement
+router.post("/post-requirement", postToNegHisRequirementController);
 
 //get requirement based on pid, sellerid, buyerid
 router.post("/get-requirement", getRequirementController);
