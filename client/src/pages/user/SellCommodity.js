@@ -160,7 +160,6 @@ const SellCommodity = () => {
             <div className="mb-3 d-flex align-items-center">
               <input type="number" value={price} placeholder='Rs. Price ' className='form-control' onChange={(e) => setPrice(e.target.value)} />
               <span className='m-3' style={{ fontWeight: "600" }}>per</span>
-              <input type="number" value={quantity} placeholder='Enter quantity' className='form-control me-2' onChange={(e) => setQuantity(e.target.value)} />
               <Radio.Group onChange={(e) => setQuantityUnit(e.target.value)} value={quantityUnit} className="d-flex align-items-center">
                 <Radio value={"ton"} className="me-3">ton</Radio>
                 <Radio value={"box"} className="me-3">box</Radio>
@@ -168,6 +167,11 @@ const SellCommodity = () => {
                 <Radio value={"dozen"} className="me-3">dozen</Radio>
                 <Radio value={"kg"}>kg</Radio>
               </Radio.Group>
+              
+            </div>
+            <div className="d-flex aligh-items-center">
+            <input type="number" value={quantity} placeholder='Total quantity available' className='form-control me-2' onChange={(e) => setQuantity(e.target.value)} />
+              <label className='m-2' htmlFor="">{quantityUnit}s</label>
             </div>
 
 

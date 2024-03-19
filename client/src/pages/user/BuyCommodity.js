@@ -69,6 +69,7 @@ const BuyCommodity = () => {
       const sellerId = sellerid;
       const sentBy = auth?.user._id;
 
+     
       const { data: proposeData } = await axios.post(
         `${process.env.REACT_APP_API}/api/v1/products/propose`,
         { buyerId, productId, sellerId }
@@ -132,11 +133,8 @@ const BuyCommodity = () => {
 
   const getProposedList = async () => {
     try {
-      const userid = auth?.user._id;
-      const { data } = await axios.post(
-        `${process.env.REACT_APP_API}/api/v1/products/proposedlist`,
-        { userid }
-      );
+      const userid = auth?.user?._id;
+      const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/products/proposedlist`,{ userid });
       if (data?.success) {
         setProposedlist(data?.proposedList);
       }
@@ -185,21 +183,21 @@ const BuyCommodity = () => {
 
   const getAllProducts = async () => {
     try {
-      if(auth?.user){
+      if (auth?.user) {
         const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/products/get-all-products`);
         if (data?.success) {
           setProducts(data?.products);
         }
       }
-      else{
-        
+      else {
+
         const { data } = await axios.get(`${process.env.REACT_APP_API}/api/v1/products/get-all-product`);
         if (data?.success) {
           setProducts(data?.products);
         }
 
       }
-      
+
     } catch (error) {
       console.log(error);
       toast.error("Something went wrong in getting all products!");
@@ -224,11 +222,11 @@ const BuyCommodity = () => {
 
   return (
     <>
-      <Nav/>
-      
+      <Nav />
+
       <div className="row m-3">
-      
-        
+
+
         <div style={{ minHeight: "50vh", width: "100%" }}>
           <div className="container" style={{ position: "relative" }}>
             <div className="d-flex align-items-center">
@@ -248,10 +246,10 @@ const BuyCommodity = () => {
                 <button
                   className="fa-solid fa-multiply btn-sm btn"
                   onClick={() => {
-                    setSearchitem("") 
+                    setSearchitem("")
                     setFilteredProducts([])
-                
-                }} // Clear the search input when the cross button is clicked
+
+                  }} // Clear the search input when the cross button is clicked
                 ></button>
               )}
               <button
@@ -332,7 +330,7 @@ const BuyCommodity = () => {
                     <div className="card-body">
                       <h5 className="card-title" style={{ fontSize: "1rem" }}>
                         {p.organic ? "Organic" : "Inorganic"} {p.name}{" "}
-                        {p.quality} 
+                        {p.quality}
                         <i className="fa-solid fa-star text-warning"></i>
                         <br />
                         {p.description}
@@ -372,7 +370,7 @@ const BuyCommodity = () => {
                       <i
                         className="fa-solid fa-phone mx-2"
                         style={{ cursor: "pointer" }}
-                        onClick={()=>{}}
+                        onClick={() => showModal}
                       ></i>
                       <i
                         className="fa-brands fa-whatsapp mx-2"
@@ -404,17 +402,17 @@ const BuyCommodity = () => {
                   <div className="card-body">
                     <h5 className="card-title" style={{ fontSize: "1rem" }}>
                       {p.organic ? "Organic" : "Inorganic"} {p.name}{" "}
-                      {p.quality} 
+                      {p.quality}
                       <i className="fa-solid fa-star text-warning"></i>
                       <br />
                       {p.description}
                     </h5>
                     <p className="card-text" style={{ fontSize: "1rem" }}>
                       <span className="text-dark bg-warning">
-                        Rs.{p.price}/- per {p.quantity} {p.quantityUnit}s
+                        Rs.{p.price}/- per {p.quantityUnit}
                         <br />
-                        (Rs. {(p.price / p.quantity).toFixed(1)} per{" "}
-                        {p.quantityUnit})
+
+                        ({p.quantity} {p.quantityUnit}s Available)
                       </span>
                     </p>
 
@@ -442,6 +440,7 @@ const BuyCommodity = () => {
                     </button>
                     <i
                       className="fa-solid fa-phone mx-2"
+                      onClick={()=>showModal}
                       style={{ cursor: "pointer" }}
                     ></i>
                     <i
@@ -524,6 +523,28 @@ const BuyCommodity = () => {
             placeholder="Some notes..."
           />
         </div>
+      </Modal>
+      <Modal
+        title="Contact details"
+        open={open}
+        onCancel={handleCancel}
+        footer={[
+          <Button key="back" onClick={handleCancel}>
+            Cancel
+          </Button>,
+          <Button
+            key="submit"
+            type="primary"
+            
+          >
+            Submit
+          </Button>,
+        ]}
+      >
+        
+        <p>hellow rold</p>
+       
+
       </Modal>
       <Footer />
     </>

@@ -115,17 +115,16 @@ const PostRequirement = () => {
   return (
     <>
       <Nav />
-      <div className="container-fluid m-3 p-3">
+      <div>
         <div className="row">
+        <h2 className="text-center m-3">Fill Product details</h2>
           
-          <div
-            className="text-center m-1"
-            style={{ minHeight: "50vh" }}
-          >
-            <h3>Fill Product details</h3>
+          <div className="text-center m-1 d-flex justify-content-between" style={{ minHeight: "50vh" }}>
+            
+            <div className=""></div>
+            
 
             <div className="m-1">
-              {/* Form Inputs */}
               <div className="mb-3">
                 <input
                   type="text"
@@ -310,6 +309,7 @@ const PostRequirement = () => {
                 </div>
               )}
             </div>
+            <div className=""></div>
           </div>
         </div>
       </div>

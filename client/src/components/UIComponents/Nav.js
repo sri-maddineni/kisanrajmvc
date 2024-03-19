@@ -71,7 +71,6 @@ export default function Nav() {
                                     <li><Link className="dropdown-item" to={auth?.user ? "/dashboard/user/post-potential" : "/login"} >Post Requirement</Link></li>
                                     <li><Link className="dropdown-item" to="/dashboard/user/post-equipment" >Post Equipment</Link></li>
                                 </ul>
-
                             </li>
 
                             <li className="nav-item">

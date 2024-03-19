@@ -42,7 +42,7 @@ export const Homepage = () => {
 
         </div>
         <div>
-          <button className="btn btn-md btn-info m-2" style={{ width: "4rem", padding: "0.3rem", borderRadius: "0.4rem" }} onClick={() => { auth?.user ? navigate("/dashboard/user/buy-commodity") : navigate("/dashboard/buy-commodity") }}>Buy</button>
+          <button className="btn btn-md btn-info m-2" style={{ width: "4rem", padding: "0.3rem", borderRadius: "0.4rem" }} onClick={() => { auth?.user ? navigate("/dashboard/user/buy-commodity") : navigate("/buy-commodity") }}>Buy</button>
           <button className="btn btn-md btn-info m-2" style={{ width: "4rem", padding: "0.3rem", borderRadius: "0.4rem" }} onClick={() => { navigate("/dashboard/user/sell-commodity") }}>Sell</button>
           <button className="btn btn-md btn-info m-2" style={{ width: "4rem", padding: "0.3rem", borderRadius: "0.4rem" }} onClick={() => { navigate("/dashboard/user/hire-equipment") }}>Hire</button>
         </div>
