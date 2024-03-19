@@ -210,6 +210,12 @@ const Profile = () => {
                     </div>
                 </div>
             </div>
+
+            <div className="userdata">
+                <pre>
+                    {JSON.stringify(auth, null, 4)}
+                </pre>
+            </div>
             <Footer />
         </>
     );

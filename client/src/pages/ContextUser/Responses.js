@@ -74,7 +74,7 @@ const Responses = () => {
         try {
             const sellerId = auth?.user?._id;
             const productId = params.pid;
-            const { data } = await axios.post(`http://localhost:8000/api/v1/requirements/get-requirement`, { sellerId, productId });
+            const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/get-requirement`, { sellerId, productId });
 
             if (data?.success) {
                 setRequirements(data.result);
@@ -95,7 +95,7 @@ const Responses = () => {
 
     const getPotentials = async (productName) => {
         try {
-            const response = await axios.post(`http://localhost:8000/api/v1/requirements/get-product-potentials`, { productName });
+            const response = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/get-product-potentials`, { productName });
 
             if (response?.data.success) {
                 setLeads(response.data.potentials);
