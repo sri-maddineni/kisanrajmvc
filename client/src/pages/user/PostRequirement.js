@@ -32,10 +32,7 @@ const PostRequirement = () => {
     try {
       const buyerId = auth?.user?._id;
 
-      const response = await axios.post(
-        `${process.env.REACT_APP_API}/api/v1/requirements/get-potentials`,
-        { buyerId }
-      );
+      const response = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/get-potentials`, { buyerId });
 
       if (response?.data.success) {
         setPotentials(response.data.potentials);
@@ -104,7 +101,7 @@ const PostRequirement = () => {
         setQuantity("")
         setQuantityUnit("")
         setShipping("")
-        
+
       }
     } catch (error) {
       console.log(error);
@@ -117,12 +114,12 @@ const PostRequirement = () => {
       <Nav />
       <div>
         <div className="row">
-        <h2 className="text-center m-3">Fill Product details</h2>
-          
+          <h2 className="text-center m-3">Fill Product details</h2>
+
           <div className="text-center m-1 d-flex justify-content-between" style={{ minHeight: "50vh" }}>
-            
+
             <div className=""></div>
-            
+
 
             <div className="m-1">
               <div className="mb-3">
@@ -152,42 +149,20 @@ const PostRequirement = () => {
               </div>
 
               <div className="mb-3 d-flex align-items-center">
-                <input
-                  type="number"
-                  value={price}
-                  placeholder="Rs. Price"
-                  className="form-control"
-                  onChange={(e) => setPrice(e.target.value)}
-                />
-                <span className="m-3" style={{ fontWeight: "600" }}>
-                  per
-                </span>
-                <input
-                  type="number"
-                  value={quantity}
-                  placeholder="Enter quantity"
-                  className="form-control me-2"
-                  onChange={(e) => setQuantity(e.target.value)}
-                />
-                <Radio.Group
-                  onChange={(e) => setQuantityUnit(e.target.value)}
-                  value={quantityUnit}
-                  className="d-flex align-items-center"
-                >
-                  <Radio value={"ton"} className="me-3">
-                    ton
-                  </Radio>
-                  <Radio value={"box"} className="me-3">
-                    box
-                  </Radio>
-                  <Radio value={"quintal"} className="me-3">
-                    quintal
-                  </Radio>
-                  <Radio value={"dozen"} className="me-3">
-                    dozen
-                  </Radio>
+                <input type="number" value={price} placeholder='Rs. Price ' className='form-control' onChange={(e) => setPrice(e.target.value)} />
+                <span className='m-3' style={{ fontWeight: "600" }}>per</span>
+                <Radio.Group onChange={(e) => setQuantityUnit(e.target.value)} value={quantityUnit} className="d-flex align-items-center">
+                  <Radio value={"ton"} className="me-3">ton</Radio>
+                  <Radio value={"box"} className="me-3">box</Radio>
+                  <Radio value={"quintal"} className="me-3">quintal</Radio>
+                  <Radio value={"dozen"} className="me-3">dozen</Radio>
                   <Radio value={"kg"}>kg</Radio>
+                  <Radio value={"item"}>item</Radio>
+                  <Radio value={"bag"}>bag</Radio>
                 </Radio.Group>
+                <input type="number" value={quantity} placeholder='Total Quantity Needed' className='form-control mx-2' onChange={(e) => setQuantity(e.target.value)} />{""} {quantityUnit}s
+
+
               </div>
 
               <div className="m-4 d-flex align-items-center">
@@ -270,7 +245,7 @@ const PostRequirement = () => {
                     display: "flex",
                     flexDirection: "row",
                     flexWrap: "wrap",
-                    justifyContent:"space-around"
+                    justifyContent: "space-around"
                   }}
                 >
                   {potentials.map((p) => (
@@ -295,11 +270,12 @@ const PostRequirement = () => {
                         <p className="card-text">
                           <span className="text-dark bg-warning">
                             {" "}
-                            Rs.{p.price}/-
+                            unit price Rs.{p.price}/-
                           </span>{" "}
-                          per{" "}
+                          {" "}
+                          <br />
                           <span>
-                            {p.quantity} {p.quantityUnit ? p.quantityUnit : ""}
+                            {p.quantity} {p.quantityUnit ? p.quantityUnit : ""}s needed
                           </span>
                         </p>
                         <p style={{ fontSize: "0.8rem" }}>{p._id}</p>

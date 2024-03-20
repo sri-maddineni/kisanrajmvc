@@ -2,7 +2,9 @@ import e from "express";
 import PotentialModel from "../models/PotentialModel.js";
 import RequirementModel from "../models/RequirementModel.js";
 import NegHistory from "../models/NegHistoryModel.js"
+import proposalModal from "../models/ProposalModel.js"
 import slugify from "slugify";
+import userModel from "../models/userModel.js";
 
 export const postRequirementController = async (req, res) => {
   try {
@@ -19,7 +21,7 @@ export const postRequirementController = async (req, res) => {
       const requirement1 = await RequirementModel.findOneAndUpdate(
         { combinedId },
         {
-          quantity,
+          quantity, 
           price,
           date,
           notes,
@@ -106,7 +108,7 @@ export const getRequirementController = async (req, res) => {
 
     // If no requirements are found, return 404
     if (!requirements || requirements.length === 0) {
-      return res.status(404).json({
+      return res.status(201).json({
         success: false,
         message: "No requirements found for the specified sellerId and productId",
       });
@@ -231,6 +233,7 @@ export const getPotentialController = async (req, res) => {
 export const getProductPotentialController = async (req, res) => {
   try {
     const { productName } = req.body;
+    const uid=req?.user?._id;
 
 
 
@@ -242,7 +245,8 @@ export const getProductPotentialController = async (req, res) => {
     }
 
     // Find all documents that match the productName
-    const potentials = await PotentialModel.find({ productName }).populate("buyerId").sort({ createdAt: -1 });
+    const potentials = await PotentialModel.find({ productName, buyerId: { $ne: uid } }).populate("buyerId").sort({ createdAt: -1 });
+
 
     // If no potentials are found, return 404
     if (!potentials || potentials.length === 0) {
@@ -305,4 +309,73 @@ export const postToNegHisRequirementController = async (req, res) => {
     });
   }
 
+}
+
+//propose offer controller
+
+export const proposeOfferController=async(req,res)=>{
+  const {quantity,price,notes,date,sentBy,buyerId,productId,sellerId}=req.body;
+  try {
+    const combinedId = `${sellerId}_${productId}_${buyerId}`;
+    const proposal=await proposalModal.create({quantity,price,notes,date,sentBy,buyerId,productId,sellerId,combinedId,});
+    const requirement=await RequirementModel.create({quantity,price,notes,date,sentBy,buyerId,productId,sellerId,combinedId,});
+
+    
+
+    if (!buyerId || !productId || !sellerId) {
+      return res.status(400).send({
+          success: false,
+          message: "buyerid, pid, or sellerid not provided",
+      });
+  }
+
+  // Update proposalsSent for buyer
+  const buyerUpdate = await userModel.findByIdAndUpdate(
+      buyerId,
+      { $addToSet: { proposalsSent: productId } },
+      { new: true }
+  );
+
+  // Update proposalsReceived for seller
+  const sellerUpdate = await userModel.findByIdAndUpdate(
+      sellerId,
+      { $addToSet: { [`proposalsReceived.${productId}`]: buyerId }, $set: { updatedAt: new Date() } },
+      { new: true, upsert: true }
+  );
+
+  // Check if updates were successful
+  if (!buyerUpdate || !sellerUpdate) {
+      console.log("Failed to update proposals");
+      return res.status(500).send({
+          success: false,
+          message: "Failed to update proposals",
+      });
+  }
+
+  if(proposal && buyerUpdate && sellerUpdate && requirement){
+    return res.status(200).send({
+      success:true,
+      message:"posted successfully",
+      proposal
+    })
+  }
+
+  // Both updates were successful
+  console.log("Propose offer successful");
+
+  res.status(200).send({
+      success: true,
+      message: "Offer proposed successfully",
+      buyerUpdate,
+      sellerUpdate
+  });
+
+
+  } catch (error) {
+    console.log(error)
+    res.status(500).send({
+      success:false,
+      message:"not posted"
+    })
+  }
 }

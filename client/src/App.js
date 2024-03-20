@@ -34,6 +34,7 @@ import HireEquipment from "./pages/user/HireEquipment"
 import EquipmentListing from "./pages/user/EquipmentListing"
 import PostRequirement from "./pages/user/PostRequirement"
 import NegHistoy from './pages/user/NegHistory'
+import PotentialLeads from './pages/user/PotentialLeads';
 
 
 
@@ -56,7 +57,7 @@ function App() {
           <Route path='/dashboard' element={<PrivateRoute />}>
             <Route path='user' element={<Dashboard />} />
             <Route path='user/proposals-recieved' element={<ProposalsRecieved />} />
-
+            <Route path='user/potential-leads' element={<PotentialLeads />} />
             <Route path='user/orders' element={<Orders />} />
             <Route path='user/listings-posted' element={<Listings />} />
             <Route path='user/profile' element={<Profile />} />

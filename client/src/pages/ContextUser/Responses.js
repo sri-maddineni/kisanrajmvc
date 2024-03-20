@@ -1,7 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import Header from "../../components/layouts/Header";
 import Footer from "../../components/layouts/Footer";
-import UserMenu from "../user/UserMenu";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { format } from "date-fns"
@@ -47,8 +45,8 @@ const Responses = () => {
             const buyerId = buyerid;
             const sentBy = auth?.user?._id;
 
-            const { data: proposeData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/products/propose`, { buyerId, productId, sellerId });
-            const { data: requirementData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/post-requirement`, { quantity, price, date, notes, buyerId, sellerId, productId, sentBy });
+            const { proposeData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/products/propose`, { buyerId, productId, sellerId });
+            const { requirementData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/post-requirement`, { quantity, price, date, notes, buyerId, sellerId, productId, sentBy });
 
             if (proposeData?.success && requirementData?.success) {
                 toast.success("Offer proposed!");
@@ -74,13 +72,14 @@ const Responses = () => {
         try {
             const sellerId = auth?.user?._id;
             const productId = params.pid;
-            const { data } = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/get-requirement`, { sellerId, productId });
+            const res  = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/get-requirement`, { sellerId, productId });
 
-            if (data?.success) {
-                setRequirements(data.result);
+            if (res.data?.success) {
+                setRequirements(res.data.result);
 
             } else {
                 console.log("Failed to fetch requirements");
+                toast.error(res.data.message)
             }
         } catch (error) {
             console.log(error);
@@ -96,7 +95,7 @@ const Responses = () => {
     const getPotentials = async (productName) => {
         try {
             const response = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/get-product-potentials`, { productName });
-
+            
             if (response?.data.success) {
                 setLeads(response.data.potentials);
             } else {
@@ -141,7 +140,7 @@ const Responses = () => {
             <Nav />
             <div className="container-fluid">
                 <div className="row">
-                    
+
                     <div style={{ minHeight: "50vh" }}>
                         <div className="titler">
                             <div className="topper p-3">
@@ -212,45 +211,45 @@ const Responses = () => {
                                             !responsesState && (
                                                 <div className="container">
                                                     <h1 className="text-center">Potential Leads</h1>
-                                                    {leads.length? 
+                                                    {leads.length ?
                                                         (<div className="row"
-                                                        style={{
-                                                            display: "flex",
-                                                            flexDirection: "row",
-                                                            flexWrap: "wrap",
-                                                            justifyContent: "space-around",
-                                                        }}>
-                                                        {leads.map((lead, index) => (
-                                                            <div className="card p-1 m-1" key={index}>
-                                                                <div className="d-flex justify-content-between">
+                                                            style={{
+                                                                display: "flex",
+                                                                flexDirection: "row",
+                                                                flexWrap: "wrap",
+                                                                justifyContent: "space-around",
+                                                            }}>
+                                                            {leads.map((lead, index) => (
+                                                                <div className="card p-1 m-1" key={index}>
+                                                                    <div className="d-flex justify-content-between">
 
-                                                                    <p>Quantity Required : {lead.quantity} {lead.quantityUnit}</p>
-                                                                    <p className="">Cost offered : {lead.price}/- ( Rs.{lead.price / lead.quantity} per {lead.quantityUnit} )</p>
+                                                                        <p>Quantity Required : {lead.quantity} {lead.quantityUnit}</p>
+                                                                        <p className="">Cost offered : {lead.price}/- ( Rs.{lead.price / lead.quantity} per {lead.quantityUnit} )</p>
 
-                                                                    <div className="card mx-2 p-1" style={{ width: "30%", display: "flex", flexDirection: "column" }}>
-                                                                        <div style={{ display: "flex", flexDirection: "row" }} >
-                                                                            <div style={{ width: "30%" }}>
-                                                                                <i className="fa-solid fa-circle-user fa-2x p-1"></i>
+                                                                        <div className="card mx-2 p-1" style={{ width: "30%", display: "flex", flexDirection: "column" }}>
+                                                                            <div style={{ display: "flex", flexDirection: "row" }} >
+                                                                                <div style={{ width: "30%" }}>
+                                                                                    <i className="fa-solid fa-circle-user fa-2x p-1"></i>
+                                                                                </div>
+                                                                                <div className="p-1" style={{ width: "70%" }}>
+                                                                                    <p style={{ fontSize: "15px" }}>{lead.buyerId.name}</p>
+                                                                                </div>
                                                                             </div>
-                                                                            <div className="p-1" style={{ width: "70%" }}>
-                                                                                <p style={{ fontSize: "15px" }}>{lead.buyerId.name}</p>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <button className="btn btn-primary btn-sm m-1">Accept</button>
+                                                                            <div>
+                                                                                <button className="btn btn-primary btn-sm m-1">Accept</button>
 
-                                                                            <i className="fa-solid fa-phone m-2" style={{ cursor: "pointer" }}></i>
-                                                                            <i className="fa-brands fa-whatsapp m-2" style={{ cursor: "pointer" }}></i>
+                                                                                <i className="fa-solid fa-phone m-2" style={{ cursor: "pointer" }}></i>
+                                                                                <i className="fa-brands fa-whatsapp m-2" style={{ cursor: "pointer" }}></i>
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
 
-                                                            </div>
-                                                        ))}
-                                                    </div>
-                                                ):<>
-                                                <div className="text-center">
-                                                    <button className="btn btn-danger">0 Potential leads found</button></div></>}
+                                                                </div>
+                                                            ))}
+                                                        </div>
+                                                        ) : <>
+                                                            <div className="text-center">
+                                                                <button className="btn btn-danger">0 Potential leads found</button></div></>}
                                                 </div>
 
                                             )

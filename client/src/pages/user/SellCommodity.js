@@ -1,14 +1,10 @@
 import React, { useState, useContext, useEffect } from 'react';
-import Header from '../../components/layouts/Header';
 import Footer from '../../components/layouts/Footer';
 import { Radio } from 'antd';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import UserMenu from './UserMenu';
-
 import AuthContext from '../../context/AuthContext';
-
 import commodities from "../../Data/Commodities"; // Import the data from Commodities.js
 import Nav from '../../components/UIComponents/Nav';
 
@@ -28,7 +24,6 @@ const SellCommodity = () => {
   const [quantity, setQuantity] = useState("");
   const [shipping, setShipping] = useState("");
   const [quantityUnit, setQuantityUnit] = useState("")
-  const [location, setLocation] = useState("")
   const [commodityId, setCommodityId] = useState("")
 
   const [suggestions, setSuggestions] = useState([]);
@@ -166,6 +161,8 @@ const SellCommodity = () => {
                 <Radio value={"quintal"} className="me-3">quintal</Radio>
                 <Radio value={"dozen"} className="me-3">dozen</Radio>
                 <Radio value={"kg"}>kg</Radio>
+                <Radio value={"item"}>item</Radio>
+                <Radio value={"bag"}>bag</Radio>
               </Radio.Group>
               
             </div>

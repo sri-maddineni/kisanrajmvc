@@ -98,6 +98,9 @@ export default function Nav() {
                                     <li className="nav-item">
                                         <Link className="nav-link active p-3" aria-current="page" to="/dashboard/user/listings-posted">Listings</Link>
                                     </li>
+                                    <li className="nav-item">
+                                        <Link className="nav-link active p-3" aria-current="page" to="/dashboard/user/potential-leads">Potentials</Link>
+                                    </li>
 
                                     <li className="nav-item dropdown">
                                         <a className="nav-link text-white p-3 disabled" href='#' id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" >

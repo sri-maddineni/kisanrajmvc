@@ -5,13 +5,17 @@ import {
     postPotentialController, 
     getPotentialController, 
     getProductPotentialController,
-    postToNegHisRequirementController
+    postToNegHisRequirementController,
+    proposeOfferController
  } from "../controllers/RequirementController.js";
 
 import { isAdmin, isUser, requireSignIn } from "../middlewares/authMiddleware.js";
 
 
 const router = express.Router();
+
+//propose offer
+router.post("/propose-offer",proposeOfferController)
 
 //register user method post
 router.post("/post-requirement", postRequirementController);
@@ -34,10 +38,6 @@ router.post("/get-potentials",requireSignIn,isUser, getPotentialController);
 
 //get all potentials posted by a user
 router.post("/get-product-potentials",requireSignIn,isUser, getProductPotentialController);
-
-
-
-
 
 
 export default router;

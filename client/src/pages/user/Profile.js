@@ -74,7 +74,7 @@ const Profile = () => {
 
     return (
         <>
-            <Header />
+            
             <Nav />
             <div className="container mt-5">
                 <div className="row">
@@ -113,7 +113,7 @@ const Profile = () => {
                                                 <p style={vibrantFieldStyle}>{formData.email}</p>
                                             ) : (
                                                 <input
-                                                    type="email"
+                                                    type="text"
                                                     name="email"
                                                     value={formData.email}
                                                     onChange={handleChange}

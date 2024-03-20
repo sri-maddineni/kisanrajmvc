@@ -87,7 +87,7 @@ const ProposalsRecieved = () => {
                           <img
                             src={`/api/v1/products/product-photo/${productId}`}
                             alt="ima"
-                            style={{ minHeight: "20vh", width: "90%" }}
+                            style={{ minHeight: "20vh",width:"90%"}}
                           />
                           <p className="card-text">
                             Product Name: {productData[productId].name}
