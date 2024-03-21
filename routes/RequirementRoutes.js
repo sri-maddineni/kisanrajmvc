@@ -6,7 +6,9 @@ import {
     getPotentialController, 
     getProductPotentialController,
     postToNegHisRequirementController,
-    proposeOfferController
+    proposeOfferController,
+    negotiateController,
+    getAllPotentialsController
  } from "../controllers/RequirementController.js";
 
 import { isAdmin, isUser, requireSignIn } from "../middlewares/authMiddleware.js";
@@ -40,4 +42,12 @@ router.post("/get-potentials",requireSignIn,isUser, getPotentialController);
 router.post("/get-product-potentials",requireSignIn,isUser, getProductPotentialController);
 
 
+//get all potentials posted by a user
+router.get("/get-all-potentials",requireSignIn,isUser, getAllPotentialsController);
+
+
+
+
+//post a negotiation to someone
+router.post("/negotiate",requireSignIn,isUser,negotiateController)
 export default router;

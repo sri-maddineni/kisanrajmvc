@@ -38,7 +38,7 @@ export default function Nav() {
                                     Buy
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><Link className="dropdown-item" to={auth?.user? "/dashboard/user/buy-commodity":"/buy-commodity"} >Buy Commodity</Link></li>
+                                    <li><Link className="dropdown-item" to={auth?.user ? "/dashboard/user/buy-commodity" : "/buy-commodity"} >Buy Commodity</Link></li>
                                     <li><Link className="dropdown-item" to="/cp" >Buy Equipment</Link></li>
 
                                 </ul>
@@ -55,23 +55,15 @@ export default function Nav() {
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link text-white p-3 disabled" href='#' id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" >
-                                    Hire
+                                    Equipment
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><Link className="dropdown-item" to="/user/hire-equipment" >Hire Equipment</Link></li>
-                                    <li><Link className="dropdown-item" to="/cp" >Hire Cold Storages</Link></li>
+                                    <li><Link className="dropdown-item" to="/user/Post-equipment" >Post Equipment</Link></li>
+                                    <li><Link className="dropdown-item" to="/user/Sell-equipment" >Sell Equipment</Link></li>
+                                </ul>
+                            </li>
 
-                                </ul>
-                            </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link text-white p-3 disabled" href='#' id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" >
-                                    Post
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><Link className="dropdown-item" to={auth?.user ? "/dashboard/user/post-potential" : "/login"} >Post Requirement</Link></li>
-                                    <li><Link className="dropdown-item" to="/dashboard/user/post-equipment" >Post Equipment</Link></li>
-                                </ul>
-                            </li>
 
                             <li className="nav-item">
                                 <Link className="nav-link active p-3" aria-current="page" to="/coldstorages">Cold Storages</Link>
@@ -98,8 +90,15 @@ export default function Nav() {
                                     <li className="nav-item">
                                         <Link className="nav-link active p-3" aria-current="page" to="/dashboard/user/listings-posted">Listings</Link>
                                     </li>
-                                    <li className="nav-item">
-                                        <Link className="nav-link active p-3" aria-current="page" to="/dashboard/user/potential-leads">Potentials</Link>
+
+                                    <li className="nav-item dropdown">
+                                        <a className="nav-link text-white p-3 disabled" href='#' id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false" >
+                                            Potentials
+                                        </a>
+                                        <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li><Link className="dropdown-item" to={auth?.user ? "/dashboard/user/potential-leads" : "/login"} >Potential leads</Link></li>
+                                            <li><Link className="dropdown-item" to={auth?.user ? "/dashboard/user/post-potential" : "/login"} >Post Potential</Link></li>
+                                        </ul>
                                     </li>
 
                                     <li className="nav-item dropdown">
@@ -140,7 +139,7 @@ export default function Nav() {
                                             <li><a className="dropdown-item" onClick={handleLogout}> English </a></li>
                                         </ul>
                                     </li>
-                                    
+
                                 </ul>
                             </>
                         )}

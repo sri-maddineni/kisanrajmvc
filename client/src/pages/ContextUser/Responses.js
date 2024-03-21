@@ -45,10 +45,10 @@ const Responses = () => {
             const buyerId = buyerid;
             const sentBy = auth?.user?._id;
 
-            const { proposeData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/products/propose`, { buyerId, productId, sellerId });
-            const { requirementData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/post-requirement`, { quantity, price, date, notes, buyerId, sellerId, productId, sentBy });
+            const { proposeData } = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/negotiate`, { buyerId, productId, sellerId });
+            const res = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/negotiate`, { quantity, price, date, notes, buyerId, sellerId, productId, sentBy });
 
-            if (proposeData?.success && requirementData?.success) {
+            if (proposeData?.success && res?.success) {
                 toast.success("Offer proposed!");
                 setOpen(false);
 
@@ -72,7 +72,7 @@ const Responses = () => {
         try {
             const sellerId = auth?.user?._id;
             const productId = params.pid;
-            const res  = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/get-requirement`, { sellerId, productId });
+            const res = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/get-requirement`, { sellerId, productId });
 
             if (res.data?.success) {
                 setRequirements(res.data.result);
@@ -95,7 +95,7 @@ const Responses = () => {
     const getPotentials = async (productName) => {
         try {
             const response = await axios.post(`${process.env.REACT_APP_API}/api/v1/requirements/get-product-potentials`, { productName });
-            
+
             if (response?.data.success) {
                 setLeads(response.data.potentials);
             } else {
@@ -149,8 +149,8 @@ const Responses = () => {
                                         <span className="text-primary m-2" style={{ fontWeight: "500", fontSize: "1.5rem" }}>
                                             {product.name}
                                         </span>{" "}
-                                        <span className="text-warning bg-dark">Rs.{product.price}/-</span> per {" "} {product.quantityUnit}
-                                        <span className="bg-warning">{product.quantity} {product.quantityUnit}s</span> Lot id: <span className="text-danger">{product._id} </span>{" "}
+                                        <span className="text-warning bg-dark">Rs.{product.price}/-</span> per {" "} {product.quantityUnit}{" "}
+                                        <span className="bg-warning">{product.quantity} {product.quantityUnit}s available</span> Lot id: <span className="text-danger">{product._id} </span>{" "}
                                         Posted on : <span className="text-info">{formattedDate}</span>{" "}
                                     </p>
                                     <div className="buttons">
@@ -180,8 +180,8 @@ const Responses = () => {
                                                                         <p><i className="fa-regular fa-clock p-1"></i>{format(new Date(requirement.date), 'dd MMM yy')}</p>
                                                                     </div>
                                                                     <div className="d-flex justify-content-between p-1" style={{ display: "flex", flexDirection: "row" }}>
-                                                                        <p>Rs.{requirement.price} /-</p>
-                                                                        <p>Quantity : {requirement.quantity} {product.quantityUnit}s</p>
+                                                                        <p>Rs.{requirement.price} /- per {product.quantityUnit}</p>
+                                                                        <p>Quantity : {requirement.quantity} {product.quantityUnit}s needed</p>
                                                                         <p>Description : {requirement.notes}</p>
                                                                     </div>
                                                                 </div>
